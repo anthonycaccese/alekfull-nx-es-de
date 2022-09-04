@@ -1,0 +1,154 @@
+<!--
+theme name:    Alekfull-NX (ES-DE Edition)
+created by:    fagnerpc
+ported from:   https://github.com/fagnerpc/Alekfull-NX
+ported by:     anthonycaccese (change log can be found at https://github.com/anthonycaccese/alekfull-nx-es-de/blob/master/readme.md)
+license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
+-->
+
+<theme>
+
+   <variables>
+      <mainFont>./_inc/fonts/Oxygen-Regular.ttf</mainFont>
+      <boldFont>./_inc/fonts/OpenSans-Semibold.ttf</boldFont>
+      <spacerImage>./_inc/images/utility/space.png</spacerImage>
+      <!-- 
+      Color Scheme Options:
+      dark
+      light
+      -->
+      <colorScheme>dark</colorScheme>
+   </variables>
+
+   <include>./color-scheme-${colorScheme}.xml</include>
+
+   <view name="system,gamelist">
+      <helpsystem name="help">
+         <origin>1 1</origin>
+         <fontPath>${mainFont}</fontPath>
+      </helpsystem>
+      <image name="art">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 0</size>
+         <path>./_inc/images/systems/${system.theme}-background.jpg</path>
+         <zIndex>1</zIndex>
+      </image>
+      <image name="background">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <tile>true</tile>
+         <path>${spacerImage}</path>
+         <zIndex>0</zIndex>
+      </image>
+   </view>
+
+   <view name="system">
+      <carousel name="system-carousel">
+         <type>horizontal</type>
+         <color>00000000</color>
+         <staticItem>./_inc/images/systems/${system.theme}-carousel.jpg</staticItem>
+         <maxItemCount>8.5</maxItemCount>
+         <text>  ${system.fullName}  </text>
+         <textColor>ffffff</textColor>
+         <textBackgroundColor>222222</textBackgroundColor>
+         <fontPath>${boldFont}</fontPath>
+         <fontSize>.02</fontSize>
+         <letterCase>uppercase</letterCase>
+         <zIndex>42</zIndex>     
+      </carousel>
+      <text name="system-info">
+         <origin>0 1</origin>
+         <systemdata>gamecount</systemdata>
+         <backgroundColor>00000000</backgroundColor>
+         <fontPath>${boldFont}</fontPath>
+         <letterCase>uppercase</letterCase>
+         <horizontalAlignment>center</horizontalAlignment>
+         <zIndex>42</zIndex>
+      </text>
+      <image name="mask">
+         <zIndex>41</zIndex>
+      </image>
+   </view>
+
+   <view name="gamelist">
+      <image name="logo">
+         <origin>0 .5</origin>
+         <path>./_inc/images/systems/${system.theme}-logo.svg</path>
+         <zIndex>42</zIndex>
+      </image>
+      <textlist name="game-list">
+         <fontPath>${mainFont}</fontPath>
+         <horizontalAlignment>left</horizontalAlignment>
+         <zIndex>42</zIndex>
+      </textlist>
+      <text name="developer,genre,publisher,playcount,players">
+         <fontPath>${boldFont}</fontPath>
+         <letterCase>capitalize</letterCase>
+         <zIndex>51</zIndex>
+      </text>
+      <datetime name="releasedate,lastplayed">
+         <fontPath>${boldFont}</fontPath>
+         <letterCase>capitalize</letterCase>
+         <zIndex>51</zIndex>
+      </datetime>
+      <rating name="rating">
+         <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
+         <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
+         <zIndex>51</zIndex>
+      </rating>
+      <text name="description">
+         <fontPath>${mainFont}</fontPath>
+         <container>true</container>
+         <zIndex>51</zIndex>
+      </text>
+      <video name="video">
+         <origin>0.5 0.5</origin>
+         <delay>2</delay>
+         <pillarboxes>false</pillarboxes>
+         <imageType>miximage,screenshot,titlescreen,fanart,cover</imageType>      
+         <zIndex>51</zIndex>
+      </video>
+      <image name="mask">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <zIndex>41</zIndex>
+      </image>
+   </view>
+
+   <view name="all">
+      <sound name="systembrowse">
+         <path>./_inc/sounds/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+         <path>./_inc/sounds/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+         <path>./_inc/sounds/select.wav</path>
+      </sound>
+      <sound name="back">
+         <path>./_inc/sounds/back.wav</path>
+      </sound>
+      <sound name="scroll">
+         <path>./_inc/sounds/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+         <path>./_inc/sounds/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+         <path>./_inc/sounds/launch.wav</path>
+      </sound>
+   </view>
+
+   <!-- 16:9 Layout -->
+   <aspectRatio name="16:9">
+      <include>./aspect-ratio-16-9.xml</include>
+   </aspectRatio>
+
+   <!-- 16:10 Layout -->
+   <aspectRatio name="16:10">
+      <include>./aspect-ratio-16-10.xml</include>
+   </aspectRatio>
+	
+</theme>
