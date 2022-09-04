@@ -32,78 +32,90 @@
       </image>
    </view>
 
-   <view name="gamelist">
-      <image name="logo">
-         <pos>0.07 0.95</pos>
-         <maxSize>0.10 0.034</maxSize>
-      </image>
-      <textlist name="game-list">
-         <pos>0.08 0.12</pos>
-         <size>0.35 0.75</size>
-         <horizontalMargin>0.006</horizontalMargin>
-         <fontSize>0.023</fontSize>
-         <lineSpacing>2.075</lineSpacing>
-      </textlist>
-      <rating name="rating">
-         <pos>0.502 0.5855</pos>
-         <size>0 0.026</size>
-      </rating>
-      <text name="genre">
-         <pos>0.502 0.635</pos>
-         <size>0.125 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>genre</metadata>
-      </text>
-      <text name="players">
-         <pos>0.524 0.681</pos>
-         <size>0.088 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>players</metadata>
-      </text>
-      <datetime name="releasedate">
-         <pos>0.665 0.588</pos>
-         <size>0.13 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>releasedate</metadata>
-      </datetime>
-      <text name="developer">
-         <pos>0.665 0.635</pos>
-         <size>0.13 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>developer</metadata>
-      </text>
-      <text name="publisher">
-         <pos>0.665 0.681</pos>
-         <size>0.13 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>publisher</metadata>
-      </text>
-      <datetime name="lastplayed">
-         <pos>0.837 0.588</pos>
-         <size>0.088 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>lastplayed</metadata>
-      </datetime>
-      <text name="playcount">
-         <pos>0.837 0.635</pos>
-         <size>0.088 0.023</size>
-         <fontSize>0.023</fontSize>
-         <metadata>playcount</metadata>
-      </text>
-      <text name="description">
-         <pos>0.50 0.73</pos>
-         <size>0.43 0.16</size>
-         <fontSize>0.023</fontSize>
-         <metadata>description</metadata>
-      </text>
-      <video name="video">
-         <pos>0.718 0.315</pos>
-         <maxSize>0.436 0.466</maxSize>
-      </video>
-      <image name="mask">
-         <size>1 1</size>
-         <path>./_inc/images/utility/gamelist-view-mask-16-9-${colorScheme}-metadata.png</path>
-      </image>
-   </view>
+   <variant name="Basic,Detailed">
+      <view name="gamelist">
+         <image name="logo">
+            <pos>0.07 0.95</pos>
+            <maxSize>0.10 0.034</maxSize>
+         </image>
+         <textlist name="game-list">
+            <pos>0.08 0.12</pos>
+            <size>0.35 0.75</size>
+            <horizontalMargin>0.006</horizontalMargin>
+            <fontSize>0.023</fontSize>
+            <lineSpacing>2.075</lineSpacing>
+         </textlist>
+         <image name="mask">
+            <size>1 1</size>
+            <path>./_inc/images/utility/gamelist-view-mask-16-9-${colorScheme}.png</path>
+         </image>
+      </view>
+   </variant>
+
+   <variant name="Detailed">
+      <view name="gamelist">
+         <rating name="rating">
+            <pos>0.502 0.5855</pos>
+            <size>0 0.026</size>
+         </rating>
+         <text name="genre">
+            <pos>0.502 0.635</pos>
+            <size>0.125 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>genre</metadata>
+         </text>
+         <text name="players">
+            <pos>0.524 0.681</pos>
+            <size>0.088 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>players</metadata>
+         </text>
+         <datetime name="releasedate">
+            <pos>0.665 0.588</pos>
+            <size>0.13 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>releasedate</metadata>
+         </datetime>
+         <text name="developer">
+            <pos>0.665 0.635</pos>
+            <size>0.13 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>developer</metadata>
+         </text>
+         <text name="publisher">
+            <pos>0.665 0.681</pos>
+            <size>0.13 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>publisher</metadata>
+         </text>
+         <datetime name="lastplayed">
+            <pos>0.837 0.588</pos>
+            <size>0.088 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>lastplayed</metadata>
+         </datetime>
+         <text name="playcount">
+            <pos>0.837 0.635</pos>
+            <size>0.088 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>playcount</metadata>
+         </text>
+         <text name="description">
+            <pos>0.50 0.73</pos>
+            <size>0.43 0.16</size>
+            <fontSize>0.023</fontSize>
+            <metadata>description</metadata>
+         </text>
+         <video name="video">
+            <pos>0.718 0.315</pos>
+            <maxSize>0.436 0.466</maxSize>
+         </video>
+         <image name="metadata-grid">
+            <size>1 1</size>
+            <path>./_inc/images/utility/gamelist-view-mask-16-9-${colorScheme}-metadata.png</path>
+            <metadataElement>true</metadataElement>
+         </image>
+      </view>
+   </variant>
    
 </theme>

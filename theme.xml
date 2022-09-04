@@ -17,7 +17,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       dark
       light
       -->
-      <colorScheme>dark</colorScheme>
+      <colorScheme>light</colorScheme>
    </variables>
 
    <include>./color-scheme-${colorScheme}.xml</include>
@@ -72,50 +72,62 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </image>
    </view>
 
-   <view name="gamelist">
-      <image name="logo">
-         <origin>0 .5</origin>
-         <path>./_inc/images/systems/${system.theme}-logo.svg</path>
-         <zIndex>42</zIndex>
-      </image>
-      <textlist name="game-list">
-         <fontPath>${mainFont}</fontPath>
-         <horizontalAlignment>left</horizontalAlignment>
-         <zIndex>42</zIndex>
-      </textlist>
-      <text name="developer,genre,publisher,playcount,players">
-         <fontPath>${boldFont}</fontPath>
-         <letterCase>capitalize</letterCase>
-         <zIndex>51</zIndex>
-      </text>
-      <datetime name="releasedate,lastplayed">
-         <fontPath>${boldFont}</fontPath>
-         <letterCase>capitalize</letterCase>
-         <zIndex>51</zIndex>
-      </datetime>
-      <rating name="rating">
-         <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
-         <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
-         <zIndex>51</zIndex>
-      </rating>
-      <text name="description">
-         <fontPath>${mainFont}</fontPath>
-         <container>true</container>
-         <zIndex>51</zIndex>
-      </text>
-      <video name="video">
-         <origin>0.5 0.5</origin>
-         <delay>2</delay>
-         <pillarboxes>false</pillarboxes>
-         <imageType>miximage,screenshot,titlescreen,fanart,cover</imageType>      
-         <zIndex>51</zIndex>
-      </video>
-      <image name="mask">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <zIndex>41</zIndex>
-      </image>
-   </view>
+   <variant name="Basic,Detailed">
+      <view name="gamelist">
+         <image name="logo">
+            <origin>0 .5</origin>
+            <path>./_inc/images/systems/${system.theme}-logo.svg</path>
+            <zIndex>42</zIndex>
+         </image>
+         <textlist name="game-list">
+            <fontPath>${mainFont}</fontPath>
+            <horizontalAlignment>left</horizontalAlignment>
+            <zIndex>42</zIndex>
+         </textlist>
+         <image name="mask">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <zIndex>41</zIndex>
+         </image>
+      </view>
+   </variant>
+
+   <variant name="Detailed">
+      <view name="gamelist">
+         <text name="developer,genre,publisher,playcount,players">
+            <fontPath>${boldFont}</fontPath>
+            <letterCase>capitalize</letterCase>
+            <zIndex>51</zIndex>
+         </text>
+         <datetime name="releasedate,lastplayed">
+            <fontPath>${boldFont}</fontPath>
+            <letterCase>capitalize</letterCase>
+            <zIndex>51</zIndex>
+         </datetime>
+         <rating name="rating">
+            <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
+            <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
+            <zIndex>51</zIndex>
+         </rating>
+         <text name="description">
+            <fontPath>${mainFont}</fontPath>
+            <container>true</container>
+            <zIndex>51</zIndex>
+         </text>
+         <video name="video">
+            <origin>0.5 0.5</origin>
+            <delay>2</delay>
+            <pillarboxes>false</pillarboxes>
+            <imageType>miximage,screenshot,titlescreen,fanart,cover</imageType>      
+            <zIndex>51</zIndex>
+         </video>
+         <image name="metadata-grid">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <zIndex>42</zIndex>
+         </image>
+      </view>
+   </variant>
 
    <view name="all">
       <sound name="systembrowse">

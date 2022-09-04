@@ -16,31 +16,38 @@
       </image>
    </view>
 
-   <view name="gamelist">
-      <image name="logo">
-         <color>ffffff88</color>
-      </image>
-      <textlist name="game-list">
-         <selectorColor>403c3e</selectorColor>
-         <selectedColor>ffffff</selectedColor>
-         <primaryColor>ffffff</primaryColor>
-         <secondaryColor>ffffff</secondaryColor>
-      </textlist>
-      <image name="background">
-         <color>1b1b1b</color>
-      </image>
-      <text name="developer,genre,publisher,playcount,players">
-         <color>aaaaaa</color>
-      </text>
-      <datetime name="releasedate,lastplayed">
-         <color>aaaaaa</color>
-      </datetime>
-      <rating name="rating">
-         <color>aaaaaa</color>
-      </rating>
-      <text name="description">
-         <color>cccccc</color>
-      </text>
-   </view>
+   <variant name="Basic,Detailed">
+      <view name="gamelist">
+         <image name="logo">
+            <color>ffffff88</color>
+         </image>
+         <textlist name="game-list">
+            <selectorColor>403c3e</selectorColor>
+            <selectedColor>ffffff</selectedColor>
+            <primaryColor>ffffff</primaryColor>
+            <secondaryColor>ffffff</secondaryColor>
+         </textlist>
+         <image name="background">
+            <color>1b1b1b</color>
+         </image>
+      </view>
+   </variant>
+
+   <variant name="Detailed">
+      <view name="gamelist">
+         <text name="developer,genre,publisher,playcount,players">
+            <color>aaaaaa</color>
+         </text>
+         <datetime name="releasedate,lastplayed">
+            <color>aaaaaa</color>
+         </datetime>
+         <rating name="rating">
+            <color>aaaaaa</color>
+         </rating>
+         <text name="description">
+            <color>cccccc</color>
+         </text>
+      </view>
+   </variant>
 
 </theme>
