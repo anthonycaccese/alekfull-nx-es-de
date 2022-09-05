@@ -58,24 +58,24 @@
             <pos>0.502 0.525</pos>
             <size>0 0.026</size>
          </rating>
-         <text name="genre">
-            <pos>0.502 0.571</pos>
-            <size>0.125 0.021</size>
-            <fontSize>0.021</fontSize>
-            <metadata>genre</metadata>
-         </text>
+         <datetime name="releasedate">
+            <pos>0.524 0.570</pos>
+            <size>0.088 0.023</size>
+            <fontSize>0.023</fontSize>
+            <metadata>releasedate</metadata>
+         </datetime>
          <text name="players">
             <pos>0.524 0.612</pos>
             <size>0.088 0.023</size>
             <fontSize>0.023</fontSize>
             <metadata>players</metadata>
          </text>
-         <datetime name="releasedate">
+         <text name="genre">
             <pos>0.665 0.528</pos>
-            <size>0.13 0.023</size>
+            <size>0.27 0.023</size>
             <fontSize>0.023</fontSize>
-            <metadata>releasedate</metadata>
-         </datetime>
+            <metadata>genre</metadata>
+         </text>
          <text name="developer">
             <pos>0.665 0.570</pos>
             <size>0.13 0.023</size>
@@ -89,13 +89,13 @@
             <metadata>publisher</metadata>
          </text>
          <datetime name="lastplayed">
-            <pos>0.837 0.528</pos>
+            <pos>0.837 0.570</pos>
             <size>0.088 0.023</size>
             <fontSize>0.023</fontSize>
             <metadata>lastplayed</metadata>
          </datetime>
          <text name="playcount">
-            <pos>0.837 0.570</pos>
+            <pos>0.837 0.612</pos>
             <size>0.088 0.023</size>
             <fontSize>0.023</fontSize>
             <metadata>playcount</metadata>
