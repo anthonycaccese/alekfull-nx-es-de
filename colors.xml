@@ -1,0 +1,66 @@
+<theme>
+   <colorScheme name="dark">
+      <variables>
+         <helpTextColor>888888</helpTextColor>
+         <helpIconColor>ffffff</helpIconColor>
+         <systemInfoColor>cccccc</systemInfoColor>
+         <systemBackgroundColor>2d2d2d</systemBackgroundColor>
+         <gamelistLogoColor>ffffff88</gamelistLogoColor>
+         <gamelistSelectorColor>403c3e</gamelistSelectorColor>
+         <gamelistSelectedColor>ffffff</gamelistSelectedColor>
+         <gamelistPrimaryColor>ffffff</gamelistPrimaryColor>
+         <gamelistSecondaryColor>ffffff</gamelistSecondaryColor>
+         <gamelistBackgroundColor>1d1d1d</gamelistBackgroundColor>
+         <metadataColor>aaaaaa</metadataColor>
+         <descriptionColor>cccccc</descriptionColor>
+      </variables>
+   </colorScheme>
+   <colorScheme name="light">
+      <variables>
+         <helpTextColor>999999</helpTextColor>
+         <helpIconColor>999999</helpIconColor>
+         <systemInfoColor>555555</systemInfoColor>
+         <systemBackgroundColor>cccccc</systemBackgroundColor>
+         <gamelistLogoColor>00000088</gamelistLogoColor>
+         <gamelistSelectorColor>403c3e</gamelistSelectorColor>
+         <gamelistSelectedColor>ffffff</gamelistSelectedColor>
+         <gamelistPrimaryColor>726f70</gamelistPrimaryColor>
+         <gamelistSecondaryColor>ffffff</gamelistSecondaryColor>
+         <gamelistBackgroundColor>cccccc</gamelistBackgroundColor>
+         <metadataColor>726f70</metadataColor>
+         <descriptionColor>555555</descriptionColor>
+      </variables>
+   </colorScheme>
+   <aspectRatio name="16:9">
+      <colorScheme name="dark">
+         <variables>
+            <systemMaskImage>./_inc/images/utility/system-view-mask-16-9-dark.png</systemMaskImage>
+            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-9-dark.png</gamelistBasicMaskImage>
+            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-9-dark-metadata.png</gamelistMetadataGridImage>
+         </variables>
+      </colorScheme>
+      <colorScheme name="light">
+         <variables>
+            <systemMaskImage>./_inc/images/utility/system-view-mask-16-9-light.png</systemMaskImage>
+            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-9-light.png</gamelistBasicMaskImage>
+            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-9-light-metadata.png</gamelistMetadataGridImage>
+         </variables>
+      </colorScheme>
+   </aspectRatio>
+   <aspectRatio name="16:10">
+      <colorScheme name="dark">
+         <variables>
+            <systemMaskImage>./_inc/images/utility/system-view-mask-16-10-dark.png</systemMaskImage>
+            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-10-dark.png</gamelistBasicMaskImage>
+            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-10-dark-metadata.png</gamelistMetadataGridImage>
+         </variables>
+      </colorScheme>
+      <colorScheme name="light">
+         <variables>
+            <systemMaskImage>./_inc/images/utility/system-view-mask-16-10-light.png</systemMaskImage>
+            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-10-light.png</gamelistBasicMaskImage>
+            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-10-light-metadata.png</gamelistMetadataGridImage>
+         </variables>
+      </colorScheme>
+   </aspectRatio>
+</theme>

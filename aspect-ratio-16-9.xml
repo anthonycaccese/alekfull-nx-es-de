@@ -28,7 +28,6 @@
          <origin>0 .5</origin>
          <pos>0 .5</pos>
          <size>1 0</size>
-         <path>./_inc/images/utility/system-view-mask-16-9-${colorScheme}.png</path>
       </image>
    </view>
 
@@ -43,11 +42,10 @@
             <size>0.35 0.75</size>
             <horizontalMargin>0.006</horizontalMargin>
             <fontSize>0.023</fontSize>
-            <lineSpacing>2.075</lineSpacing>
+            <lineSpacing>2.01</lineSpacing>
          </textlist>
          <image name="mask">
             <size>1 1</size>
-            <path>./_inc/images/utility/gamelist-view-mask-16-9-${colorScheme}.png</path>
          </image>
       </view>
    </variant>
@@ -112,7 +110,6 @@
          </video>
          <image name="metadata-grid">
             <size>1 1</size>
-            <path>./_inc/images/utility/gamelist-view-mask-16-9-${colorScheme}-metadata.png</path>
             <metadataElement>true</metadataElement>
          </image>
       </view>

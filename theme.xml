@@ -12,20 +12,16 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <mainFont>./_inc/fonts/Oxygen-Regular.ttf</mainFont>
       <boldFont>./_inc/fonts/OpenSans-Semibold.ttf</boldFont>
       <spacerImage>./_inc/images/utility/space.png</spacerImage>
-      <!-- 
-      Color Scheme Options:
-      dark
-      light
-      -->
-      <colorScheme>light</colorScheme>
    </variables>
 
-   <include>./color-scheme-${colorScheme}.xml</include>
+   <include>./colors.xml</include>
 
    <view name="system,gamelist">
       <helpsystem name="help">
          <origin>1 1</origin>
          <fontPath>${mainFont}</fontPath>
+         <textColor>${helpTextColor}</textColor>
+         <iconColor>${helpIconColor}</iconColor>
       </helpsystem>
       <image name="art">
          <origin>0 0</origin>
@@ -66,10 +62,15 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontPath>${boldFont}</fontPath>
          <letterCase>uppercase</letterCase>
          <horizontalAlignment>center</horizontalAlignment>
+         <color>${systemInfoColor}</color>
          <zIndex>42</zIndex>
       </text>
       <image name="mask">
+         <path>${systemMaskImage}</path>
          <zIndex>41</zIndex>
+      </image>
+      <image name="background">
+         <color>${systemBackgroundColor}</color>
       </image>
    </view>
 
@@ -78,17 +79,26 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <image name="logo">
             <origin>0 .5</origin>
             <path>./_inc/images/systems/${system.theme}-logo.svg</path>
+            <color>${gamelistLogoColor}</color>
             <zIndex>42</zIndex>
          </image>
          <textlist name="game-list">
             <fontPath>${mainFont}</fontPath>
             <horizontalAlignment>left</horizontalAlignment>
+            <selectorColor>${gamelistSelectorColor}</selectorColor>
+            <selectedColor>${gamelistSelectedColor}</selectedColor>
+            <primaryColor>${gamelistPrimaryColor}</primaryColor>
+            <secondaryColor>${gamelistSecondaryColor}</secondaryColor>
             <zIndex>42</zIndex>
          </textlist>
          <image name="mask">
             <origin>0 0</origin>
             <pos>0 0</pos>
+            <path>${gamelistBasicMaskImage}</path>
             <zIndex>41</zIndex>
+         </image>
+         <image name="background">
+            <color>${gamelistBackgroundColor}</color>
          </image>
       </view>
    </variant>
@@ -98,21 +108,25 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text name="developer,genre,publisher,playcount,players">
             <fontPath>${boldFont}</fontPath>
             <letterCase>capitalize</letterCase>
+            <color>${metadataColor}</color>
             <zIndex>51</zIndex>
          </text>
          <datetime name="releasedate,lastplayed">
             <fontPath>${boldFont}</fontPath>
             <letterCase>capitalize</letterCase>
+            <color>${metadataColor}</color>
             <zIndex>51</zIndex>
          </datetime>
          <rating name="rating">
             <filledPath>./_inc/images/utility/star-filled.svg</filledPath>
             <unfilledPath>./_inc/images/utility/star-empty.svg</unfilledPath>
+            <color>${metadataColor}</color>
             <zIndex>51</zIndex>
          </rating>
          <text name="description">
             <fontPath>${mainFont}</fontPath>
             <container>true</container>
+            <color>${descriptionColor}</color>
             <zIndex>51</zIndex>
          </text>
          <video name="video">
@@ -125,6 +139,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <image name="metadata-grid">
             <origin>0 0</origin>
             <pos>0 0</pos>
+            <path>${gamelistMetadataGridImage}</path>
             <zIndex>42</zIndex>
          </image>
       </view>
