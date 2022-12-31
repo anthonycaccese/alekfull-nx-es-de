@@ -44,10 +44,10 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <carousel name="system-carousel">
          <type>horizontal</type>
          <color>00000000</color>
-         <staticItem>./_inc/images/systems/${system.theme}-carousel.jpg</staticItem>
+         <staticImage>./_inc/images/systems/${system.theme}-carousel.jpg</staticImage>
          <maxItemCount>5.68</maxItemCount>
          <horizontalOffset>-0.28</horizontalOffset>
-         <text>  ${system.fullName}  </text>
+         <text>${system.fullName}</text>
          <textColor>ffffff</textColor>
          <textBackgroundColor>222222</textBackgroundColor>
          <fontPath>${boldFont}</fontPath>
