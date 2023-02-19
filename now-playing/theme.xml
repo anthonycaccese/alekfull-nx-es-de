@@ -1,0 +1,8 @@
+<theme>
+   <include>./../theme.xml</include>
+   <view name="system">
+      <carousel name="system-carousel">
+         <text>Now Playing</text>
+      </carousel>
+   </view>
+</theme>

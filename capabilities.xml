@@ -1,4 +1,6 @@
 <themeCapabilities>
+   
+   <themeName>Alekfull NX</themeName>
 
    <aspectRatio>16:9</aspectRatio>
    <aspectRatio>16:10</aspectRatio>
@@ -10,13 +12,33 @@
         <label>Light</label>
     </colorScheme>
 
+   <transitions name="transitions">
+      <label>transitions</label>
+      <selectable>false</selectable>
+      <systemToSystem>instant</systemToSystem>
+      <systemToGamelist>slide</systemToGamelist>
+      <gamelistToGamelist>instant</gamelistToGamelist>
+      <gamelistToSystem>slide</gamelistToSystem>
+      <startupToSystem>instant</startupToSystem>
+      <startupToGamelist>instant</startupToGamelist>
+   </transitions>
+   <suppressTransitionProfiles>
+      <entry>builtin-instant</entry>
+      <entry>builtin-slide</entry>
+      <entry>builtin-fade</entry>
+   </suppressTransitionProfiles>
+
    <variant name="Detailed">
       <label>Detailed</label>
-      <selectable>true</selectable>
+      <selectable>false</selectable>
+      <override>
+         <trigger>noMedia</trigger>
+         <useVariant>Basic</useVariant>
+      </override>
    </variant>
    <variant name="Basic">
       <label>Basic</label>
-      <selectable>true</selectable>
+      <selectable>false</selectable>
    </variant>
 
 </themeCapabilities>
