@@ -28,6 +28,7 @@ license:       Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>0 0</pos>
          <size>1 0</size>
          <path>./_inc/images/systems/${system.theme}-background.jpg</path>
+         <interpolation>linear</interpolation>
          <zIndex>1</zIndex>
       </image>
       <image name="background">
