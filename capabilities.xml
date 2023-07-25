@@ -4,21 +4,21 @@
 
    <aspectRatio>16:9</aspectRatio>
    <aspectRatio>16:10</aspectRatio>
-
-   <colorScheme name="dark">
-        <label>Dark</label>
-    </colorScheme>
-    <colorScheme name="light">
-        <label>Light</label>
-    </colorScheme>
+   
+   <colorScheme name="light-original">
+      <label>Light</label>
+   </colorScheme>
+   <colorScheme name="dark-original">
+      <label>Dark</label>
+   </colorScheme>
 
    <transitions name="transitions">
       <label>transitions</label>
       <selectable>false</selectable>
       <systemToSystem>instant</systemToSystem>
-      <systemToGamelist>slide</systemToGamelist>
+      <systemToGamelist>instant</systemToGamelist>
       <gamelistToGamelist>instant</gamelistToGamelist>
-      <gamelistToSystem>slide</gamelistToSystem>
+      <gamelistToSystem>instant</gamelistToSystem>
       <startupToSystem>instant</startupToSystem>
       <startupToGamelist>instant</startupToGamelist>
    </transitions>
@@ -28,15 +28,16 @@
       <entry>builtin-fade</entry>
    </suppressTransitionProfiles>
 
-   <variant name="Detailed">
+   <variant name="detailed">
       <label>Detailed</label>
       <selectable>false</selectable>
       <override>
          <trigger>noMedia</trigger>
-         <useVariant>Basic</useVariant>
+         <mediaType>miximage,screenshot,titlescreen,fanart,cover</mediaType>
+         <useVariant>basic</useVariant>
       </override>
    </variant>
-   <variant name="Basic">
+   <variant name="basic">
       <label>Basic</label>
       <selectable>false</selectable>
    </variant>

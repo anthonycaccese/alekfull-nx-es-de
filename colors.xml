@@ -1,66 +1,55 @@
 <theme>
-   <colorScheme name="dark">
+   <colorScheme name="dark-original">
       <variables>
-         <helpTextColor>888888</helpTextColor>
-         <helpIconColor>ffffff</helpIconColor>
+         <helpTextColor>818181</helpTextColor>
+         <helpIconColor>818181</helpIconColor>
+         <backgroundColor>2d2d2d</backgroundColor>
          <systemInfoColor>cccccc</systemInfoColor>
-         <systemBackgroundColor>2d2d2d</systemBackgroundColor>
-         <gamelistLogoColor>ffffff88</gamelistLogoColor>
-         <gamelistSelectorColor>403c3e</gamelistSelectorColor>
+         <systemCarouselTextColor>cccccc</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>3d3d3d</systemCarouselTextBackgroundColor>
+         <backgroundMaskImage>background-mask-dark.png</backgroundMaskImage>
+         <systemLogoColor>cccccc</systemLogoColor>
+         <gamelistBackgroundImage>gamelist-background-dark</gamelistBackgroundImage>
+         <gamelistMetadataBackgroundImage>gamelist-metadata-background-dark</gamelistMetadataBackgroundImage>
+         <gamelistSelectorColor>404040</gamelistSelectorColor>
          <gamelistSelectedColor>ffffff</gamelistSelectedColor>
-         <gamelistPrimaryColor>ffffff</gamelistPrimaryColor>
-         <gamelistSecondaryColor>ffffff</gamelistSecondaryColor>
-         <gamelistBackgroundColor>1d1d1d</gamelistBackgroundColor>
-         <metadataColor>aaaaaa</metadataColor>
-         <descriptionColor>cccccc</descriptionColor>
+         <gamelistPrimaryColor>808080</gamelistPrimaryColor>
+         <gamelistSecondaryColor>808080</gamelistSecondaryColor>
+         <gameDescriptionColor>ffffff</gameDescriptionColor>
+         <gameMetadataColor>bbbbbb</gameMetadataColor>
       </variables>
    </colorScheme>
-   <colorScheme name="light">
+   <colorScheme name="light-original">
       <variables>
          <helpTextColor>999999</helpTextColor>
          <helpIconColor>999999</helpIconColor>
+         <backgroundColor>fbfbfb</backgroundColor>
          <systemInfoColor>555555</systemInfoColor>
-         <systemBackgroundColor>cccccc</systemBackgroundColor>
-         <gamelistLogoColor>00000088</gamelistLogoColor>
-         <gamelistSelectorColor>403c3e</gamelistSelectorColor>
+         <systemCarouselTextColor>444444</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>aaaaaa</systemCarouselTextBackgroundColor>
+         <backgroundMaskImage>background-mask-light.png</backgroundMaskImage>
+         <systemLogoColor>555555</systemLogoColor>
+         <gamelistBackgroundImage>gamelist-background-light</gamelistBackgroundImage>
+         <gamelistMetadataBackgroundImage>gamelist-metadata-background-light</gamelistMetadataBackgroundImage>
+         <gamelistSelectorColor>404040</gamelistSelectorColor>
          <gamelistSelectedColor>ffffff</gamelistSelectedColor>
-         <gamelistPrimaryColor>726f70</gamelistPrimaryColor>
-         <gamelistSecondaryColor>726f70</gamelistSecondaryColor>
-         <gamelistBackgroundColor>cccccc</gamelistBackgroundColor>
-         <metadataColor>726f70</metadataColor>
-         <descriptionColor>555555</descriptionColor>
+         <gamelistPrimaryColor>a0a0a0</gamelistPrimaryColor>
+         <gamelistSecondaryColor>a0a0a0</gamelistSecondaryColor>
+         <gameDescriptionColor>000000</gameDescriptionColor>
+         <gameMetadataColor>555555</gameMetadataColor>
       </variables>
    </colorScheme>
-   <aspectRatio name="16:9">
-      <colorScheme name="dark">
-         <variables>
-            <systemMaskImage>./_inc/images/utility/system-view-mask-16-9-dark.png</systemMaskImage>
-            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-9-dark.png</gamelistBasicMaskImage>
-            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-9-dark-metadata.png</gamelistMetadataGridImage>
-         </variables>
-      </colorScheme>
-      <colorScheme name="light">
-         <variables>
-            <systemMaskImage>./_inc/images/utility/system-view-mask-16-9-light.png</systemMaskImage>
-            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-9-light.png</gamelistBasicMaskImage>
-            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-9-light-metadata.png</gamelistMetadataGridImage>
-         </variables>
-      </colorScheme>
-   </aspectRatio>
-   <aspectRatio name="16:10">
-      <colorScheme name="dark">
-         <variables>
-            <systemMaskImage>./_inc/images/utility/system-view-mask-16-10-dark.png</systemMaskImage>
-            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-10-dark.png</gamelistBasicMaskImage>
-            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-10-dark-metadata.png</gamelistMetadataGridImage>
-         </variables>
-      </colorScheme>
-      <colorScheme name="light">
-         <variables>
-            <systemMaskImage>./_inc/images/utility/system-view-mask-16-10-light.png</systemMaskImage>
-            <gamelistBasicMaskImage>./_inc/images/utility/gamelist-view-mask-16-10-light.png</gamelistBasicMaskImage>
-            <gamelistMetadataGridImage>./_inc/images/utility/gamelist-view-mask-16-10-light-metadata.png</gamelistMetadataGridImage>
-         </variables>
-      </colorScheme>
-   </aspectRatio>
+   <colorScheme name="dark-original,light-original">
+      <variables>
+         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
+         <systemBackgroundArtPath>background/${system.theme}.jpg</systemBackgroundArtPath>
+         <gamelistBackgroundArtPath>background/${system.theme}.jpg</gamelistBackgroundArtPath>
+         <layeredBackground>false</layeredBackground>
+         <showSystemScreenshot>false</showSystemScreenshot>
+         <showSystemVideo>false</showSystemVideo>
+         <showCarouselSelector>true</showCarouselSelector>
+         <showCarouselShadow>true</showCarouselShadow>
+      </variables>
+   </colorScheme>
 </theme>
