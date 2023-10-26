@@ -93,6 +93,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </image>
       <image name="background-art">
          <path>./_inc/systems/${systemBackgroundArtPath}</path>
+         <interpolation>linear</interpolation>
       </image>
       <carousel name="system-carousel">
          <origin>0 0.5</origin>
