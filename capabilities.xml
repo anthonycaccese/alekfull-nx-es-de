@@ -11,6 +11,12 @@
    <colorScheme name="dark-original">
       <label>Dark</label>
    </colorScheme>
+   <colorScheme name="light-custom">
+      <label>Light (Custom Backgrounds)</label>
+   </colorScheme>
+   <colorScheme name="dark-custom">
+      <label>Dark (Custom Backgrounds)</label>
+   </colorScheme>
 
    <transitions name="transitions">
       <label>transitions</label>

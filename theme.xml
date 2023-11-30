@@ -3,7 +3,6 @@ theme name:             Alekfull-NX-Revamp (ES-DE Edition)
 created by:             fagnerpc
 ported from:            https://github.com/fagnerpc/Alekfull-NX
 ported by:              anthonycaccese (change log can be found at https://github.com/anthonycaccese/alekfull-nx-revamp-es-de/)
-revised artwork by:     vitamanic
 license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
 16:9 resolution:        3840x2160
 16:10 resolution:       3840x2400
@@ -61,36 +60,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
 
    <!-- System: Defaults -->
    <view name="system">
-      <image name="background-art-screenshot">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 0</size>
-         <path>./_inc/systems/vitamanic/screenshot/${system.theme}.png</path>
-         <visible>${showSystemScreenshot}</visible>
-         <zIndex>1</zIndex>
-      </image>
-      <gameselector name="system-game">
-         <selection>random</selection>
-      </gameselector>
-      <video name="background-art-video">
-         <origin>0.5 0</origin>
-         <cropSize>0.6 0.9</cropSize>
-         <saturation>0</saturation>
-         <imageType>screenshot</imageType>
-         <pillarboxes>false</pillarboxes>
-         <opacity>0.8</opacity>
-         <delay>2</delay>
-         <visible>${showSystemVideo}</visible>
-         <zIndex>1</zIndex>
-      </video>
-      <image name="background-art-overlay">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 0</size>
-         <path>./_inc/systems/vitamanic/overlay/${system.theme}.png</path>
-         <visible>${layeredBackground}</visible>
-         <zIndex>2</zIndex>
-      </image>
       <image name="background-art">
          <path>./_inc/systems/${systemBackgroundArtPath}</path>
          <interpolation>linear</interpolation>
@@ -115,13 +84,11 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <origin>0.5 0.5</origin>
          <path>./_inc/images/system-carousel-selector.svg</path>
          <color>${systemCarouselSelectorColor}</color>
-         <visible>${showCarouselSelector}</visible>
          <zIndex>11</zIndex>
       </image>
       <image name="system-carousel-selector-shadow">
          <origin>0.5 0.5</origin>
          <path>./_inc/images/system-carousel-selector-shadow.png</path>
-         <visible>${showCarouselShadow}</visible>
          <zIndex>9</zIndex>
       </image>
       <text name="system-info">
@@ -248,9 +215,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </helpsystem>
       </view>
       <view name="system">
-         <video name="background-art-video">
-            <pos>0.227083333333333 0</pos><!-- 872 0 -->
-         </video>
          <carousel name="system-carousel">
             <pos>0 0.715277777777778</pos><!-- 0 1545 -->
             <size>1 0.319444444444444</size><!-- 100% 690 -->
@@ -371,9 +335,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </helpsystem>
       </view>
       <view name="system">
-         <video name="background-art-video">
-            <pos>0.227083333333333 0</pos><!-- 872 0 -->
-         </video>
          <carousel name="system-carousel">
             <pos>0 0.69375</pos><!-- 0 1665 -->
             <size>1 0.2875</size><!-- 100% 690 -->

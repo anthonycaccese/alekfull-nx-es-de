@@ -1,5 +1,5 @@
 <theme>
-   <colorScheme name="dark-original">
+   <colorScheme name="dark-original,dark-custom">
       <variables>
          <helpTextColor>818181</helpTextColor>
          <helpIconColor>818181</helpIconColor>
@@ -19,7 +19,7 @@
          <gameMetadataColor>bbbbbb</gameMetadataColor>
       </variables>
    </colorScheme>
-   <colorScheme name="light-original">
+   <colorScheme name="light-original,light-custom">
       <variables>
          <helpTextColor>999999</helpTextColor>
          <helpIconColor>999999</helpIconColor>
@@ -45,11 +45,14 @@
          <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
          <systemBackgroundArtPath>background/${system.theme}.jpg</systemBackgroundArtPath>
          <gamelistBackgroundArtPath>background/${system.theme}.jpg</gamelistBackgroundArtPath>
-         <layeredBackground>false</layeredBackground>
-         <showSystemScreenshot>false</showSystemScreenshot>
-         <showSystemVideo>false</showSystemVideo>
-         <showCarouselSelector>true</showCarouselSelector>
-         <showCarouselShadow>true</showCarouselShadow>
+      </variables>
+   </colorScheme>
+   <colorScheme name="dark-custom,light-custom">
+      <variables>
+         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
+         <systemBackgroundArtPath>background-custom/${system.theme}.jpg</systemBackgroundArtPath>
+         <gamelistBackgroundArtPath>background-custom/${system.theme}.jpg</gamelistBackgroundArtPath>
       </variables>
    </colorScheme>
 </theme>
