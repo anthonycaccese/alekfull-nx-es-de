@@ -4,22 +4,30 @@ created by:             fagnerpc
 ported from:            https://github.com/fagnerpc/Alekfull-NX
 ported by:              anthonycaccese (change log can be found at https://github.com/anthonycaccese/alekfull-nx-revamp-es-de/)
 license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
-16:9 resolution:        3840x2160
-16:10 resolution:       3840x2400
+16:9 resolution:        based on 3840x2160
+16:10 resolution:       based on 3840x2400
 -->
 
 <theme>
 
+   <!--
+   ///
+   Global Variables
+   ///
+   -->
    <variables>
       <fontRegular>./_inc/fonts/Oxygen-Regular.ttf</fontRegular>
       <fontBold>./_inc/fonts/Gilroy-Bold.ttf</fontBold>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
       <spacerImage>./_inc/images/space.png</spacerImage>
    </variables>
-
    <include>./colors.xml</include>
 
-   <!-- Defaults -->
+   <!--
+   ///
+   All Views: Defaults
+   ///
+   -->
    <view name="system,gamelist">
       <image name="background">
          <origin>0 0</origin>
@@ -35,6 +43,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <pos>0 0</pos>
          <size>1 0</size>
          <zIndex>3</zIndex>
+         <interpolation>linear</interpolation>
       </image>
       <image name="background-mask">
          <origin>0 1</origin>
@@ -81,11 +90,14 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </helpsystem>
    </view>
 
-   <!-- System: Defaults -->
+   <!--
+   ///
+   System View: Defaults
+   ///
+   -->
    <view name="system">
       <image name="background-art">
-         <path>./_inc/systems/${systemBackgroundArtPath}</path>
-         <interpolation>linear</interpolation>
+         <path>./_inc/systems/${backgroundArtPath}</path>
       </image>
       <carousel name="system-carousel">
          <origin>0 0.5</origin>
@@ -94,11 +106,13 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <maxItemCount>5.5</maxItemCount>
          <unfocusedItemOpacity>0.8</unfocusedItemOpacity>
          <horizontalOffset>-0.27265625</horizontalOffset>
-         <staticImage>./_inc/systems/${carouselArtPath}</staticImage>
+         <staticImage>./_inc/systems/${systemCarouselArtPath}</staticImage>
          <imageCornerRadius>0.005</imageCornerRadius>
          <text>${system.fullName}</text>
          <textColor>${systemCarouselTextColor}</textColor>
          <textBackgroundColor>${systemCarouselTextBackgroundColor}</textBackgroundColor>
+         <textRelativeScale>0.8</textRelativeScale>
+         <lineSpacing>1.2</lineSpacing>
          <fontPath>${fontBold}</fontPath>
          <letterCase>uppercase</letterCase>
          <fastScrolling>true</fastScrolling>
@@ -125,12 +139,15 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </text>
    </view>
 
-   <!-- Gamelist: Defaults -->
+   <!--
+   ///
+   Gamelist View: Defaults
+   ///
+   -->
    <view name="gamelist">
       <image name="background-art">
-         <path>./_inc/systems/${gamelistBackgroundArtPath}</path>
-         <saturation>1</saturation>
-         <opacity>0.2</opacity>
+         <path>./_inc/systems/${backgroundArtPath}</path>
+         <opacity>${gamelistBackgroundOpacity}</opacity>
       </image>
       <image name="game-list-background-shadow">
          <origin>0.5 0.5</origin>
@@ -147,22 +164,66 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <image name="system-logo">
          <origin>0 0.5</origin>
          <path>./_inc/systems/logos/${system.theme}.svg</path>
-         <color>${systemLogoColor}</color>
+         <color>${gamelistLogoColor}</color>
       </image>
       <text name="custom-collection-name">
          <fontPath>${fontLogo}</fontPath>
       </text>
    </view>
 
-   <!-- Gamelist: Detailed View -->
-   <variant name="detailed">
+   <!--
+   ///
+   Gamelist View: Metadata Off Variants
+   ///
+   -->
+   <variant name="
+      gamelist-metadata-off-miximage,
+      gamelist-metadata-off-boxart
+      ">
       <view name="gamelist">
          <video name="game-media">
             <origin>0.5 0.5</origin>
             <delay>3</delay>
-            <imageType>miximage,cover,screenshot,titlescreen</imageType>
             <videoCornerRadius>0.005</videoCornerRadius>
             <pillarboxes>false</pillarboxes>
+            <iterationCount>1</iterationCount>
+            <onIterationsDone>image</onIterationsDone>
+         </video>
+      </view>
+   </variant>
+   <variant name="gamelist-metadata-off-miximage">
+      <view name="gamelist">
+         <video name="game-media">
+         <imageType>miximage,cover</imageType>
+         </video>
+      </view>
+   </variant>
+   <variant name="gamelist-metadata-off-boxart">
+      <view name="gamelist">
+         <video name="game-media">
+            <imageType>cover,miximage</imageType>
+            <imageCornerRadius>0.005</imageCornerRadius>
+         </video>
+      </view>
+   </variant>
+
+   <!--
+   ///
+   Gamelist View: Metadata On Variants
+   ///
+   -->
+   <variant name="
+      gamelist-metadata-on-miximage,
+      gamelist-metadata-on-boxart
+      ">
+      <view name="gamelist">
+         <video name="game-media">
+            <origin>0.5 0.5</origin>
+            <delay>3</delay>
+            <videoCornerRadius>0.005</videoCornerRadius>
+            <pillarboxes>false</pillarboxes>
+            <iterationCount>1</iterationCount>
+            <onIterationsDone>image</onIterationsDone>
          </video>
          <image name="game-metadata-background-shadow">
             <origin>0.5 0.5</origin>
@@ -226,8 +287,27 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </text>
       </view>
    </variant>
+   <variant name="gamelist-metadata-on-miximage">
+      <view name="gamelist">
+         <video name="game-media">
+         <imageType>miximage,cover</imageType>
+         </video>
+      </view>
+   </variant>
+   <variant name="gamelist-metadata-on-boxart">
+      <view name="gamelist">
+         <video name="game-media">
+            <imageType>cover,miximage</imageType>
+            <imageCornerRadius>0.005</imageCornerRadius>
+         </video>
+      </view>
+   </variant>
 
-   <!-- Aspect Ratio 16:9 -->
+   <!--
+   ///
+   Aspect Ratio: 16:9
+   ///
+   -->
    <aspectRatio name="16:9">
       <view name="system,gamelist">
          <image name="background-gradient">
@@ -235,7 +315,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <size>1 0.462962962962963</size><!-- 100% 1000 -->
          </image>
          <helpsystem name="help">
-            <pos>0.947916666666667 0.937962962962963</pos><!-- 3640 2020 -->
             <posDimmed>0.5 0.955</posDimmed>
             <fontSize>${helpSystemFontSize}</fontSize>
          </helpsystem>
@@ -245,7 +324,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <pos>0 0.715277777777778</pos><!-- 0 1545 -->
             <size>1 0.319444444444444</size><!-- 100% 690 -->
             <itemSize>0.15625 0.277777777777778</itemSize><!-- 600 600 -->
-            <fontSize>${carouselTextFontSize}</fontSize><!-- 44 -->
+            <fontSize>${systemCarouselFontSize}</fontSize>
          </carousel>
          <image name="system-carousel-selector">
             <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
@@ -258,19 +337,22 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text name="system-info">
             <pos>0.227083333333333 0.944444444444444</pos><!-- 872 2040 -->
             <size>0.280208333333333 0.02962962962963</size><!-- 1076 64 -->
-            <fontSize>${systemInfoFontSize}</fontSize><!-- 64 -->
+            <fontSize>${systemInfoFontSize}</fontSize>
          </text>
+         <helpsystem name="help">
+            <pos>0.947916666666667 0.935185185185185</pos><!-- 3640 2020 -->
+         </helpsystem>
       </view>
       <view name="gamelist">
          <image name="game-list-background-shadow">
             <pos>0.256770833333333 0.460648148148148</pos><!-- 986 995 -->
             <size>0.440104166666667 0.796296296296296</size><!-- 1690 1720 -->
-            <path>./_inc/images/gamelist-background-shadow-16-9.png</path>
+            <path>./_inc/images/16-9-gamelist-background-shadow.png</path>
          </image>
          <image name="game-list-background">
             <pos>0.049479166666667 0.085648148148148</pos><!-- 190 185 -->
             <size>0.4140625 0.75</size><!-- 1590 1620 -->
-            <path>./_inc/images/${gamelistBackgroundImage}-16-9.svg</path>
+            <path>${gamelistBackgroundImageCalculated}</path>
          </image>
          <textlist name="game-list">
             <pos>0.082291666666667 0.116666666666667</pos><!-- 316 252 -->
@@ -280,15 +362,19 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <lineSpacing>${gamelistLineSpacing}</lineSpacing><!-- 100/54 -->
          </textlist>
          <image name="system-logo">
-            <pos>0.057291666666667 0.921296296296296</pos><!-- 220 1990 -->
+            <pos>0.057291666666667 0.916666666666667</pos><!-- 220 1980 -->
             <maxSize>0.130208333333333 0.046296296296296</maxSize><!-- 500 100 -->
          </image>
+         <helpsystem name="help">
+            <pos>0.947916666666667 0.930555555555556</pos><!-- 3640 2010 -->
+         </helpsystem>
       </view>
       <fontSize name="medium">
          <variables>
             <helpSystemFontSize>0.024074074074074</helpSystemFontSize><!-- 52 -->
             <systemInfoFontSize>0.02962962962963</systemInfoFontSize><!-- 64 -->
-            <carouselTextFontSize>0.02037037037037</carouselTextFontSize><!-- 44 -->
+            <systemCarouselFontSize>0.02037037037037</systemCarouselFontSize><!-- 44 -->
+            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-medium.svg</gamelistBackgroundImageCalculated>
             <gamelistFontSize>0.025</gamelistFontSize><!-- 54 -->
             <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight><!-- 86 -->
             <gamelistLineSpacing>1.851851851851852</gamelistLineSpacing><!-- 100/54 -->
@@ -297,15 +383,43 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       <fontSize name="large">
          <variables>
             <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 60 -->
-            <systemInfoFontSize>0.033333333333333</systemInfoFontSize><!-- 72 -->
-            <carouselTextFontSize>0.025925925925926</carouselTextFontSize><!-- 56 -->
-            <gamelistFontSize>0.02962962962963</gamelistFontSize><!-- 64 -->
-            <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight><!-- 86 -->
-            <gamelistLineSpacing>1.5625</gamelistLineSpacing><!-- 100/64 -->
+            <systemInfoFontSize>0.036111111111111</systemInfoFontSize><!-- 78 -->
+            <systemCarouselFontSize>0.027777777777778</systemCarouselFontSize><!-- 60 -->
+            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-large.svg</gamelistBackgroundImageCalculated>
+            <gamelistFontSize>0.031481481481481</gamelistFontSize><!-- 68 -->
+            <gamelistSelectorHeight>0.051388888888889</gamelistSelectorHeight><!-- 111 -->
+            <gamelistLineSpacing>1.838235294117647</gamelistLineSpacing><!-- 125/68 -->
+         </variables>
+      </fontSize>
+      <fontSize name="x-large">
+         <variables>
+            <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 60 -->
+            <systemInfoFontSize>0.036111111111111</systemInfoFontSize><!-- 78 -->
+            <systemCarouselFontSize>0.027777777777778</systemCarouselFontSize><!-- 60 -->
+            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-xlarge.svg</gamelistBackgroundImageCalculated>
+            <gamelistFontSize>0.039814814814815</gamelistFontSize><!-- 86 -->
+            <gamelistSelectorHeight>0.062962962962963</gamelistSelectorHeight><!-- 136 -->
+            <gamelistLineSpacing>1.744186046511628</gamelistLineSpacing><!-- 150/86 -->
          </variables>
       </fontSize>
    </aspectRatio>
-   <variant name="detailed">
+   <variant name="
+      gamelist-metadata-off-miximage,
+      gamelist-metadata-off-boxart
+      ">
+      <aspectRatio name="16:9">
+         <view name="gamelist">
+            <video name="game-media">
+               <pos>0.72578125 0.463888888888889</pos><!-- 2787 1002 -->
+               <maxSize>0.448958333333333 0.694444444444444</maxSize><!-- 1724 1500 -->
+            </video>
+         </view>
+      </aspectRatio>
+   </variant>
+   <variant name="
+      gamelist-metadata-on-miximage,
+      gamelist-metadata-on-boxart
+      ">
       <aspectRatio name="16:9">
          <view name="gamelist">
             <video name="game-media">
@@ -380,10 +494,21 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <descriptionLineSpacing>1.2</descriptionLineSpacing>
             </variables>
          </fontSize>
+         <fontSize name="x-large">
+            <variables>
+               <metaDatafontSize>0.018518518518519</metaDatafontSize><!-- 40 -->
+               <descriptionFontSize>0.024074074074074</descriptionFontSize><!-- 52 -->
+               <descriptionLineSpacing>1.5</descriptionLineSpacing>
+            </variables>
+         </fontSize>
       </aspectRatio>
    </variant>
 
-   <!-- Aspect Ratio 16:10 -->
+   <!--
+   ///
+   Aspect Ratio: 16:10
+   ///
+   -->
    <aspectRatio name="16:10">
       <view name="system,gamelist">
          <image name="background-gradient">
@@ -421,12 +546,12 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <image name="game-list-background-shadow">
             <pos>0.256770833333333 0.45625</pos><!-- 986 1095 -->
             <size>0.440104166666667 0.8</size><!-- 1690 1920 -->
-            <path>./_inc/images/gamelist-background-shadow-16-10.png</path>
+            <path>./_inc/images/16-10-gamelist-background-shadow.png</path>
          </image>
          <image name="game-list-background">
             <pos>0.049479166666667 0.077083333333333</pos><!-- 190 185 -->
             <size>0.4140625 0.758333333333333</size><!-- 1590 1820 -->
-            <path>./_inc/images/${gamelistBackgroundImage}-16-10.svg</path>
+            <path>./_inc/images/16-10-${gamelistBackgroundImage}.svg</path>
          </image>
          <textlist name="game-list">
             <pos>0.082291666666667 0.105</pos><!-- 316 252 -->
@@ -441,7 +566,23 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </image>
       </view>
    </aspectRatio>
-   <variant name="detailed">
+   <variant name="
+      gamelist-metadata-off-miximage,
+      gamelist-metadata-off-boxart
+      ">
+      <aspectRatio name="16:10">
+         <view name="gamelist">
+            <video name="game-media">
+               <pos>0.72578125 0.459166666666667</pos><!-- 2787 1102 -->
+               <maxSize>0.448958333333333 0.708333333333333</maxSize><!-- 1724 1700 -->
+            </video>
+         </view>
+      </aspectRatio>
+   </variant>
+   <variant name="
+      gamelist-metadata-on-miximage,
+      gamelist-metadata-on-boxart
+      ">
       <aspectRatio name="16:10">
          <view name="gamelist">
             <video name="game-media">
@@ -504,7 +645,11 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </aspectRatio>
    </variant>
 
-   <!-- Sounds -->
+   <!--
+   ///
+   Sounds
+   ///
+   -->
    <view name="all">
       <sound name="systembrowse">
          <path>./_inc/sounds/systembrowse.wav</path>
