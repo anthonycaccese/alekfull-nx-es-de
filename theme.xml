@@ -211,7 +211,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </text>
          <datetime name="game-lastplayed">
             <metadata>lastplayed</metadata>
-            <defaultValue>Never Played</defaultValue>
+            <defaultValue>Never</defaultValue>
          </datetime>
          <text name="game-playcount">
             <metadata>playcount</metadata>
@@ -235,9 +235,9 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <size>1 0.462962962962963</size><!-- 100% 1000 -->
          </image>
          <helpsystem name="help">
-            <pos>0.947916666666667 0.935185185185185</pos><!-- 3640 2020 -->
+            <pos>0.947916666666667 0.937962962962963</pos><!-- 3640 2020 -->
             <posDimmed>0.5 0.955</posDimmed>
-            <fontSize>0.024074074074074</fontSize><!-- 52 -->
+            <fontSize>${helpSystemFontSize}</fontSize>
          </helpsystem>
       </view>
       <view name="system">
@@ -245,7 +245,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <pos>0 0.715277777777778</pos><!-- 0 1545 -->
             <size>1 0.319444444444444</size><!-- 100% 690 -->
             <itemSize>0.15625 0.277777777777778</itemSize><!-- 600 600 -->
-            <fontSize>0.02037037037037</fontSize><!-- 44 -->
+            <fontSize>${carouselTextFontSize}</fontSize><!-- 44 -->
          </carousel>
          <image name="system-carousel-selector">
             <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
@@ -258,7 +258,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <text name="system-info">
             <pos>0.227083333333333 0.944444444444444</pos><!-- 872 2040 -->
             <size>0.280208333333333 0.02962962962963</size><!-- 1076 64 -->
-            <fontSize>0.02962962962963</fontSize><!-- 64 -->
+            <fontSize>${systemInfoFontSize}</fontSize><!-- 64 -->
          </text>
       </view>
       <view name="gamelist">
@@ -275,15 +275,35 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <textlist name="game-list">
             <pos>0.082291666666667 0.116666666666667</pos><!-- 316 252 -->
             <size>0.348958333333333 0.694444444444444</size><!-- 1340 1500 -->
-            <fontSize>0.025</fontSize><!-- 54 -->
-            <selectorHeight>0.039814814814815</selectorHeight><!-- 86 -->
-            <lineSpacing>1.851851851851852</lineSpacing><!-- 100/54 -->
+            <fontSize>${gamelistFontSize}</fontSize><!-- 54 -->
+            <selectorHeight>${gamelistSelectorHeight}</selectorHeight><!-- 86 -->
+            <lineSpacing>${gamelistLineSpacing}</lineSpacing><!-- 100/54 -->
          </textlist>
          <image name="system-logo">
             <pos>0.057291666666667 0.921296296296296</pos><!-- 220 1990 -->
             <maxSize>0.130208333333333 0.046296296296296</maxSize><!-- 500 100 -->
          </image>
       </view>
+      <fontSize name="medium">
+         <variables>
+            <helpSystemFontSize>0.024074074074074</helpSystemFontSize><!-- 52 -->
+            <systemInfoFontSize>0.02962962962963</systemInfoFontSize><!-- 64 -->
+            <carouselTextFontSize>0.02037037037037</carouselTextFontSize><!-- 44 -->
+            <gamelistFontSize>0.025</gamelistFontSize><!-- 54 -->
+            <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight><!-- 86 -->
+            <gamelistLineSpacing>1.851851851851852</gamelistLineSpacing><!-- 100/54 -->
+         </variables>
+      </fontSize>
+      <fontSize name="large">
+         <variables>
+            <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 60 -->
+            <systemInfoFontSize>0.033333333333333</systemInfoFontSize><!-- 72 -->
+            <carouselTextFontSize>0.025925925925926</carouselTextFontSize><!-- 56 -->
+            <gamelistFontSize>0.02962962962963</gamelistFontSize><!-- 64 -->
+            <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight><!-- 86 -->
+            <gamelistLineSpacing>1.5625</gamelistLineSpacing><!-- 100/64 -->
+         </variables>
+      </fontSize>
    </aspectRatio>
    <variant name="detailed">
       <aspectRatio name="16:9">
@@ -301,50 +321,65 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
             </image>
             <text name="game-players,game-genre,game-developer,game-publisher,game-playcount">
-               <fontSize>0.018518518518519</fontSize><!-- 40 -->
+               <fontSize>${metaDatafontSize}</fontSize>
             </text>
             <datetime name="game-releasedate,game-lastplayed">
-               <fontSize>0.018518518518519</fontSize><!-- 40 -->
+               <fontSize>${metaDatafontSize}</fontSize>
             </datetime>
             <rating name="game-rating">
                <pos>0.56640625 0.590277777777778</pos><!-- 2175 1275 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </rating>
             <datetime name="game-releasedate">
                <pos>0.538020833333333 0.634259259259259</pos><!-- 2066 1370 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </datetime>
             <text name="game-players">
                <pos>0.538020833333333 0.678240740740741</pos><!-- 2066 1465 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </text>
             <text name="game-genre">
                <pos>0.652604166666667 0.590277777777778</pos><!-- 2506 1275 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </text>
             <text name="game-developer">
                <pos>0.652604166666667 0.634259259259259</pos><!-- 2506 1370 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </text>
             <text name="game-publisher">
                <pos>0.652604166666667 0.678240740740741</pos><!-- 2506 1465 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </text>
             <datetime name="game-lastplayed">
                <pos>0.85546875 0.634259259259259</pos><!-- 3285 1370 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </datetime>
             <text name="game-playcount">
                <pos>0.85546875 0.678240740740741</pos><!-- 3285 1465 -->
-               <size>0 0.018518518518519</size><!-- - 40 -->
+               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
             </text>
             <text name="game-description">
                <pos>0.72578125 0.837962962962963</pos><!-- 2787 1810 -->
-               <size>0.422916666666667 0.12</size><!-- 1624 -->
-               <fontSize>0.024074074074074</fontSize><!-- 52 -->
+               <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
+               <fontSize>${descriptionFontSize}</fontSize>
+               <lineSpacing>${descriptionLineSpacing}</lineSpacing>
                <containerScrollSpeed>0.6</containerScrollSpeed>
             </text>
          </view>
+         <fontSize name="medium">
+            <variables>
+               <metaDatafontSize>0.018518518518519</metaDatafontSize><!-- 40 -->
+               <descriptionFontSize>0.024074074074074</descriptionFontSize><!-- 52 -->
+               <descriptionLineSpacing>1.5</descriptionLineSpacing>
+            </variables>
+         </fontSize>
+         <fontSize name="large">
+            <variables>
+               <metaDatafontSize>0.023148148148148</metaDatafontSize><!-- 50 -->
+               <descriptionFontSize>0.028703703703704</descriptionFontSize><!-- 62 -->
+               <descriptionLineSpacing>1.2</descriptionLineSpacing>
+            </variables>
+         </fontSize>
       </aspectRatio>
    </variant>
 
