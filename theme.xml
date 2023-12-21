@@ -52,9 +52,32 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
       </image>
       <helpsystem name="help">
          <origin>1 1</origin>
+         <originDimmed>0.5 0</originDimmed>
          <fontPath>${fontBold}</fontPath>
          <textColor>${helpTextColor}</textColor>
          <iconColor>${helpIconColor}</iconColor>
+         <textColorDimmed>${helpTextColorDimmed}</textColorDimmed>
+         <iconColorDimmed>${helpIconColorDimmed}</iconColorDimmed>
+         <customButtonIcon button="dpad_updown">./_inc/images/help-dpad-updown.svg</customButtonIcon>
+         <customButtonIcon button="dpad_leftright">./_inc/images/help-dpad-leftright.svg</customButtonIcon>
+         <customButtonIcon button="dpad_all">./_inc/images/help-dpad-updownleftright.svg</customButtonIcon>
+         <customButtonIcon button="button_a_XBOX">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_a_PS">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_a_switch">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_a_SNES">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_b_XBOX">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_b_PS">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_b_switch">./_inc/images/help-button-south.svg</customButtonIcon>
+         <customButtonIcon button="button_b_SNES">./_inc/images/help-button-east.svg</customButtonIcon>
+         <customButtonIcon button="button_x_XBOX">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_x_PS">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_x_switch">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_x_SNES">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_y_XBOX">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_y_PS">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="button_y_switch">./_inc/images/help-button-west.svg</customButtonIcon>
+         <customButtonIcon button="button_y_SNES">./_inc/images/help-button-north.svg</customButtonIcon>
+         <customButtonIcon button="thumbstick_click">./_inc/images/help-left-stick-click.svg</customButtonIcon>
       </helpsystem>
    </view>
 
@@ -72,6 +95,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <unfocusedItemOpacity>0.8</unfocusedItemOpacity>
          <horizontalOffset>-0.27265625</horizontalOffset>
          <staticImage>./_inc/systems/${carouselArtPath}</staticImage>
+         <imageCornerRadius>0.005</imageCornerRadius>
          <text>${system.fullName}</text>
          <textColor>${systemCarouselTextColor}</textColor>
          <textBackgroundColor>${systemCarouselTextBackgroundColor}</textBackgroundColor>
@@ -137,6 +161,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <origin>0.5 0.5</origin>
             <delay>3</delay>
             <imageType>miximage,cover,screenshot,titlescreen</imageType>
+            <videoCornerRadius>0.005</videoCornerRadius>
             <pillarboxes>false</pillarboxes>
          </video>
          <image name="game-metadata-background-shadow">
@@ -211,6 +236,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </image>
          <helpsystem name="help">
             <pos>0.947916666666667 0.935185185185185</pos><!-- 3640 2020 -->
+            <posDimmed>0.5 0.955</posDimmed>
             <fontSize>0.024074074074074</fontSize><!-- 52 -->
          </helpsystem>
       </view>
@@ -331,6 +357,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </image>
          <helpsystem name="help">
             <pos>0.947916666666667 0.925</pos><!-- 3700 2220 -->
+            <posDimmed>0.5 0.955</posDimmed>
             <fontSize>0.021666666666667</fontSize><!-- 52 -->
          </helpsystem>
       </view>

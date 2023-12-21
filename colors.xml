@@ -3,6 +3,8 @@
       <variables>
          <helpTextColor>818181</helpTextColor>
          <helpIconColor>818181</helpIconColor>
+         <helpTextColorDimmed>aaaaaa</helpTextColorDimmed>
+         <helpIconColorDimmed>aaaaaa</helpIconColorDimmed>
          <backgroundColor>2d2d2d</backgroundColor>
          <systemInfoColor>cccccc</systemInfoColor>
          <systemCarouselTextColor>cccccc</systemCarouselTextColor>
@@ -23,6 +25,8 @@
       <variables>
          <helpTextColor>999999</helpTextColor>
          <helpIconColor>999999</helpIconColor>
+         <helpTextColorDimmed>333333</helpTextColorDimmed>
+         <helpIconColorDimmed>333333</helpIconColorDimmed>
          <backgroundColor>fbfbfb</backgroundColor>
          <systemInfoColor>555555</systemInfoColor>
          <systemCarouselTextColor>444444</systemCarouselTextColor>
@@ -49,7 +53,7 @@
    </colorScheme>
    <colorScheme name="dark-custom,light-custom">
       <variables>
-         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <systemCarouselSelectorColor>ffffff</systemCarouselSelectorColor>
          <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
          <systemBackgroundArtPath>background-custom/${system.theme}.jpg</systemBackgroundArtPath>
          <gamelistBackgroundArtPath>background-custom/${system.theme}.jpg</gamelistBackgroundArtPath>
