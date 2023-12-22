@@ -132,6 +132,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <origin>0.5 1</origin>
          <systemdata>gamecount</systemdata>
          <fontPath>${fontBold}</fontPath>
+         <lineSpacing>1</lineSpacing>
          <letterCase>uppercase</letterCase>
          <horizontalAlignment>center</horizontalAlignment>
          <color>${systemInfoColor}</color>
@@ -262,6 +263,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </text>
          <text name="game-genre-extended">
             <metadata>genre</metadata>
+            <letterCase>capitalize</letterCase>
          </text>
          <text name="game-developer-extended">
             <metadata>developer</metadata>
@@ -293,6 +295,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
             <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
             <color>${gameMetadataColor}</color>
+            <overlay>false</overlay>
          </rating>
          <datetime name="game-releasedate-base">
             <origin>0 0.5</origin>
@@ -301,6 +304,8 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <lineSpacing>1</lineSpacing>
             <metadata>releasedate</metadata>
             <defaultValue>Unknown</defaultValue>
+            <horizontalAlignment>center</horizontalAlignment>
+            <format>%Y-%m</format>
          </datetime>
          <text name="game-genre-base">
             <origin>0 0.5</origin>
@@ -311,6 +316,8 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <metadata>genre</metadata>
             <container>true</container>
             <containerType>horizontal</containerType>
+            <horizontalAlignment>center</horizontalAlignment>
+            <letterCase>capitalize</letterCase>
          </text>
          <!-- End: Base Metadata -->
          <text name="game-description">
@@ -320,384 +327,22 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <metadata>description</metadata>
             <color>${gameDescriptionColor}</color>
             <containerStartDelay>8</containerStartDelay>
+            <containerScrollSpeed>0.6</containerScrollSpeed>
          </text>
       </view>
    </variant>
 
    <!--
    ///
-   Aspect Ratio: 16:9
+   Aspect Ratios
    ///
    -->
    <aspectRatio name="16:9">
-      <view name="system,gamelist">
-         <image name="background-art-gradient">
-            <pos>0 0.481481481481481</pos><!-- 0 1040 -->
-            <size>1 0.462962962962963</size><!-- 100% 1000 -->
-         </image>
-         <helpsystem name="help">
-            <posDimmed>0.5 0.955</posDimmed>
-            <fontSize>${helpSystemFontSize}</fontSize>
-         </helpsystem>
-      </view>
-      <view name="system">
-         <image name="system-carousel-selector-shadow">
-            <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
-            <size>0.203125 0.361111111111111</size><!-- 780 780 -->
-         </image>
-         <carousel name="system-carousel">
-            <pos>0 0.715277777777778</pos><!-- 0 1545 -->
-            <size>1 0.319444444444444</size><!-- 100% 690 -->
-            <itemSize>0.15625 0.277777777777778</itemSize><!-- 600 600 -->
-            <fontSize>${systemCarouselFontSize}</fontSize>
-         </carousel>
-         <image name="system-carousel-selector">
-            <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
-            <size>0.182291666666667 0.324074074074074</size><!-- 700 700 -->
-         </image>
-         <text name="system-info">
-            <pos>0.227083333333333 0.944444444444444</pos><!-- 872 2040 -->
-            <size>0.280208333333333 0.02962962962963</size><!-- 1076 64 -->
-            <fontSize>${systemInfoFontSize}</fontSize>
-         </text>
-         <helpsystem name="help">
-            <pos>0.947916666666667 0.935185185185185</pos><!-- 3640 2020 -->
-         </helpsystem>
-      </view>
-      <view name="gamelist">
-         <image name="game-list-background-shadow">
-            <pos>0.256770833333333 0.460648148148148</pos><!-- 986 995 -->
-            <size>0.440104166666667 0.796296296296296</size><!-- 1690 1720 -->
-            <path>./_inc/images/16-9-gamelist-background-shadow.png</path>
-         </image>
-         <image name="game-list-background">
-            <pos>0.049479166666667 0.085648148148148</pos><!-- 190 185 -->
-            <size>0.4140625 0.75</size><!-- 1590 1620 -->
-            <path>${gamelistBackgroundImageCalculated}</path>
-         </image>
-         <textlist name="game-list">
-            <pos>0.082291666666667 0.116666666666667</pos><!-- 316 252 -->
-            <size>0.348958333333333 0.694444444444444</size><!-- 1340 1500 -->
-            <fontSize>${gamelistFontSize}</fontSize><!-- 54 -->
-            <selectorHeight>${gamelistSelectorHeight}</selectorHeight><!-- 86 -->
-            <lineSpacing>${gamelistLineSpacing}</lineSpacing><!-- 100/54 -->
-         </textlist>
-         <image name="system-logo">
-            <pos>0.057291666666667 0.916666666666667</pos><!-- 220 1980 -->
-            <maxSize>0.130208333333333 0.046296296296296</maxSize><!-- 500 100 -->
-         </image>
-         <helpsystem name="help">
-            <pos>0.947916666666667 0.930555555555556</pos><!-- 3640 2010 -->
-         </helpsystem>
-      </view>
-      <fontSize name="medium">
-         <variables>
-            <helpSystemFontSize>0.024074074074074</helpSystemFontSize><!-- 52 -->
-            <systemInfoFontSize>0.02962962962963</systemInfoFontSize><!-- 64 -->
-            <systemCarouselFontSize>0.02037037037037</systemCarouselFontSize><!-- 44 -->
-            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-medium.svg</gamelistBackgroundImageCalculated>
-            <gamelistFontSize>0.025</gamelistFontSize><!-- 54 -->
-            <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight><!-- 86 -->
-            <gamelistLineSpacing>1.851851851851852</gamelistLineSpacing><!-- 100/54 -->
-         </variables>
-      </fontSize>
-      <fontSize name="large">
-         <variables>
-            <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 60 -->
-            <systemInfoFontSize>0.036111111111111</systemInfoFontSize><!-- 78 -->
-            <systemCarouselFontSize>0.027777777777778</systemCarouselFontSize><!-- 60 -->
-            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-large.svg</gamelistBackgroundImageCalculated>
-            <gamelistFontSize>0.033333333333333</gamelistFontSize><!-- 72 -->
-            <gamelistSelectorHeight>0.051388888888889</gamelistSelectorHeight><!-- 111 -->
-            <gamelistLineSpacing>1.736111111111111</gamelistLineSpacing><!-- 125/72 -->
-         </variables>
-      </fontSize>
-      <fontSize name="x-large">
-         <variables>
-            <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 60 -->
-            <systemInfoFontSize>0.036111111111111</systemInfoFontSize><!-- 78 -->
-            <systemCarouselFontSize>0.027777777777778</systemCarouselFontSize><!-- 60 -->
-            <gamelistBackgroundImageCalculated>./_inc/images/16-9-${gamelistBackgroundImage}-xlarge.svg</gamelistBackgroundImageCalculated>
-            <gamelistFontSize>0.039814814814815</gamelistFontSize><!-- 86 -->
-            <gamelistSelectorHeight>0.062962962962963</gamelistSelectorHeight><!-- 136 -->
-            <gamelistLineSpacing>1.744186046511628</gamelistLineSpacing><!-- 150/86 -->
-         </variables>
-      </fontSize>
+      <include>./aspect-ratio-16-9.xml</include>
    </aspectRatio>
-   <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
-      <aspectRatio name="16:9">
-         <view name="gamelist">
-            <video name="game-media">
-               <pos>0.72578125 0.463888888888889</pos><!-- 2787 1002 -->
-               <maxSize>0.448958333333333 0.694444444444444</maxSize><!-- 1724 1500 -->
-            </video>
-         </view>
-      </aspectRatio>
-   </variant>
-   <variant name="gamelist-metadata-on-miximage,gamelist-metadata-on-boxart">
-      <aspectRatio name="16:9">
-         <view name="gamelist">
-            <video name="game-media">
-               <pos>0.72578125 0.319444444444444</pos><!-- 2787 690 -->
-               <maxSize>0.448958333333333 0.449074074074074</maxSize><!-- 1724 970 -->
-            </video>
-            <!-- Start: Extended Metadata -->
-            <image name="game-metadata-background-shadow-extended">
-               <pos>0.72578125 0.634259259259259</pos><!-- 2787 1370 -->
-               <size>0.433333333333333 0.138888888888889</size><!-- 1664 300 -->
-               <visible>${metadataExtended}</visible>
-            </image>
-            <image name="game-metadata-background-image-extended">
-               <pos>0.72578125 0.634259259259259</pos><!-- 2787 1370 -->
-               <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
-               <visible>${metadataExtended}</visible>
-            </image>
-            <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
-               <fontSize>${metaDatafontSize}</fontSize>
-               <visible>${metadataExtended}</visible>
-            </text>
-            <datetime name="game-releasedate-extended,game-lastplayed-extended">
-               <fontSize>${metaDatafontSize}</fontSize>
-               <visible>${metadataExtended}</visible>
-            </datetime>
-            <rating name="game-rating-extended">
-               <pos>0.56640625 0.590277777777778</pos><!-- 2175 1275 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
-            </rating>
-            <datetime name="game-releasedate-extended">
-               <pos>0.538020833333333 0.634259259259259</pos><!-- 2066 1370 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </datetime>
-            <text name="game-players-extended">
-               <pos>0.538020833333333 0.678240740740741</pos><!-- 2066 1465 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </text>
-            <text name="game-genre-extended">
-               <pos>0.652604166666667 0.590277777777778</pos><!-- 2506 1275 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </text>
-            <text name="game-developer-extended">
-               <pos>0.652604166666667 0.634259259259259</pos><!-- 2506 1370 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </text>
-            <text name="game-publisher-extended">
-               <pos>0.652604166666667 0.678240740740741</pos><!-- 2506 1465 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </text>
-            <datetime name="game-lastplayed-extended">
-               <pos>0.85546875 0.634259259259259</pos><!-- 3285 1370 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </datetime>
-            <text name="game-playcount-extended">
-               <pos>0.85546875 0.678240740740741</pos><!-- 3285 1465 -->
-               <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-            </text>
-            <!-- End: Extended Metadata -->
-            <!-- Start: Base Metadata -->
-            <image name="game-metadata-background-shadow-base">
-               <pos>0.72578125 0.606481481481481</pos><!-- 2787 1310 -->
-               <size>0.433333333333333 0.06712962962963</size><!-- 1664 145 -->
-               <visible>${metadataBase}</visible>
-            </image>
-            <image name="game-metadata-background-image-base">
-               <pos>0.72578125 0.606481481481481</pos><!-- 2787 1310 -->
-               <size>0.422916666666667 0.048611111111111</size><!-- 1624 105 -->
-               <visible>${metadataBase}</visible>
-            </image>
-            <rating name="game-rating-base">
-               <pos>0.56640625 0.606018518518519</pos><!-- 2175 1309 -->
-               <size>0 ${metaDatafontSize}</size>
-               <visible>${metadataBase}</visible>
-            </rating>
-            <datetime name="game-releasedate-base">
-               <pos>0.635416666666667 0.606018518518519</pos><!-- 2440 1309 -->
-               <size>0 ${metaDatafontSize}</size>
-               <fontSize>${metaDatafontSize}</fontSize>
-               <visible>${metadataBase}</visible>
-            </datetime>
-            <text name="game-genre-base">
-               <pos>0.751041666666667 0.606018518518519</pos><!-- 3056 1309 -->
-               <size>0.18 ${metaDatafontSize}</size>
-               <fontSize>${metaDatafontSize}</fontSize>
-               <visible>${metadataBase}</visible>
-            </text>
-            <!-- End: Base Metadata -->
-            <text name="game-description">
-               <pos>0.72578125 0.837962962962963</pos><!-- 2787 1810 -->
-               <size>0.422916666666667 ${descriptionHeight}</size><!-- 1624 fontSize -->
-               <fontSize>${descriptionFontSize}</fontSize>
-               <lineSpacing>${descriptionLineSpacing}</lineSpacing>
-               <containerScrollSpeed>0.6</containerScrollSpeed>
-            </text>
-         </view>
-         <fontSize name="medium">
-            <variables>
-               <metaDatafontSize>0.018518518518519</metaDatafontSize><!-- 40 -->
-               <descriptionHeight>0.12037037037037</descriptionHeight><!-- 260 -->
-               <descriptionFontSize>0.024074074074074</descriptionFontSize><!-- 52 -->
-               <descriptionLineSpacing>1.5</descriptionLineSpacing>
-               <metadataExtended>true</metadataExtended>
-               <metadataBase>false</metadataBase>
-            </variables>
-         </fontSize>
-         <fontSize name="large">
-            <variables>
-               <metaDatafontSize>0.028703703703704</metaDatafontSize><!-- 62 -->
-               <descriptionHeight>0.185185185185185</descriptionHeight><!-- 400 -->
-               <descriptionFontSize>0.037037037037037</descriptionFontSize><!-- 80 -->
-               <descriptionLineSpacing>1.6</descriptionLineSpacing>
-               <metadataExtended>false</metadataExtended>
-               <metadataBase>true</metadataBase>
-            </variables>
-         </fontSize>
-         <fontSize name="x-large">
-            <variables>
-               <metaDatafontSize>0.032407407407407</metaDatafontSize><!-- 70 -->
-               <descriptionHeight>0.185185185185185</descriptionHeight><!-- 400 -->
-               <descriptionFontSize>0.037037037037037</descriptionFontSize><!-- 80 -->
-               <descriptionLineSpacing>1.6</descriptionLineSpacing>
-               <metadataExtended>false</metadataExtended>
-               <metadataBase>true</metadataBase>
-            </variables>
-         </fontSize>
-      </aspectRatio>
-   </variant>
-
-   <!--
-   ///
-   Aspect Ratio: 16:10
-   ///
-   -->
    <aspectRatio name="16:10">
-      <view name="system,gamelist">
-         <image name="background-art-gradient">
-            <pos>0 0.483333333333333</pos><!-- 0 1160 -->
-            <size>1 0.416666666666667</size><!-- 0 1000 -->
-         </image>
-         <helpsystem name="help">
-            <pos>0.947916666666667 0.925</pos><!-- 3700 2220 -->
-            <posDimmed>0.5 0.955</posDimmed>
-            <fontSize>0.021666666666667</fontSize><!-- 52 -->
-         </helpsystem>
-      </view>
-      <view name="system">
-         <carousel name="system-carousel">
-            <pos>0 0.69375</pos><!-- 0 1665 -->
-            <size>1 0.2875</size><!-- 100% 690 -->
-            <itemSize>0.15625 0.25</itemSize><!-- 600 600 -->
-            <fontSize>0.018333333333333</fontSize><!-- 44 -->
-         </carousel>
-         <image name="system-carousel-selector">
-            <pos>0.227083333333333 0.69375</pos><!-- 872 1665 -->
-            <size>0.182291666666667 0.291666666666667</size><!-- 700 700 -->
-         </image>
-         <image name="system-carousel-selector-shadow">
-            <pos>0.227083333333333 0.69375</pos><!-- 872 1665 -->
-            <size>0.203125 0.325</size><!-- 780 780 -->
-         </image>
-         <text name="system-info">
-            <pos>0.227083333333333 0.93</pos><!-- 872 2232 -->
-            <size>0.280208333333333 0.026666666666667</size><!-- 1076 64 -->
-            <fontSize>0.026666666666667</fontSize><!-- 64 -->
-         </text>
-      </view>
-      <view name="gamelist">
-         <image name="game-list-background-shadow">
-            <pos>0.256770833333333 0.45625</pos><!-- 986 1095 -->
-            <size>0.440104166666667 0.8</size><!-- 1690 1920 -->
-            <path>./_inc/images/16-10-gamelist-background-shadow.png</path>
-         </image>
-         <image name="game-list-background">
-            <pos>0.049479166666667 0.077083333333333</pos><!-- 190 185 -->
-            <size>0.4140625 0.758333333333333</size><!-- 1590 1820 -->
-            <path>./_inc/images/16-10-${gamelistBackgroundImage}.svg</path>
-         </image>
-         <textlist name="game-list">
-            <pos>0.082291666666667 0.105</pos><!-- 316 252 -->
-            <size>0.348958333333333 0.708333333333333</size><!-- 1340 1700 -->
-            <fontSize>0.0225</fontSize><!-- 54 -->
-            <selectorHeight>0.035833333333333</selectorHeight><!-- 86 -->
-            <lineSpacing>1.851851851851852</lineSpacing><!-- 100/54 -->
-         </textlist>
-         <image name="system-logo">
-            <pos>0.057291666666667 0.9125</pos><!-- 220 2190 -->
-            <maxSize>0.130208333333333 0.041666666666667</maxSize><!-- 500 100 -->
-         </image>
-      </view>
+      <include>./aspect-ratio-16-10.xml</include>
    </aspectRatio>
-   <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
-      <aspectRatio name="16:10">
-         <view name="gamelist">
-            <video name="game-media">
-               <pos>0.72578125 0.459166666666667</pos><!-- 2787 1102 -->
-               <maxSize>0.448958333333333 0.708333333333333</maxSize><!-- 1724 1700 -->
-            </video>
-         </view>
-      </aspectRatio>
-   </variant>
-   <variant name="gamelist-metadata-on-miximage,gamelist-metadata-on-boxart">
-      <aspectRatio name="16:10">
-         <view name="gamelist">
-            <video name="game-media">
-               <pos>0.72578125 0.295833333333333</pos><!-- 2787 710 -->
-               <maxSize>0.448958333333333 0.404166666666667</maxSize><!-- 1724 970 -->
-            </video>
-            <image name="game-metadata-background-shadow-extended">
-               <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
-               <size>0.433333333333333 0.125</size><!-- 1664 300 -->
-            </image>
-            <image name="game-metadata-background-image-extended">
-               <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
-               <size>0.422916666666667 0.108333333333333</size><!-- 1624 260 -->
-            </image>
-            <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
-               <fontSize>0.016666666666667</fontSize><!-- 40 -->
-            </text>
-            <datetime name="game-releasedate-extended,game-lastplayed-extended">
-               <fontSize>0.016666666666667</fontSize><!-- 40 -->
-            </datetime>
-            <rating name="game-rating-extended">
-               <pos>0.56640625 0.56125</pos><!-- 2175 1347 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </rating>
-            <datetime name="game-releasedate-extended">
-               <pos>0.538020833333333 0.600833333333333</pos><!-- 2066 1452 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </datetime>
-            <text name="game-players-extended">
-               <pos>0.538020833333333 0.640416666666667</pos><!-- 2066 1537 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </text>
-            <text name="game-genre-extended">
-               <pos>0.652604166666667 0.56125</pos><!-- 2506 1347 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </text>
-            <text name="game-developer-extended">
-               <pos>0.652604166666667 0.600833333333333</pos><!-- 2506 1452 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </text>
-            <text name="game-publisher-extended">
-               <pos>0.652604166666667 0.640416666666667</pos><!-- 2506 1537 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </text>
-            <datetime name="game-lastplayed-extended">
-               <pos>0.85546875 0.600833333333333</pos><!-- 3285 1452 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </datetime>
-            <text name="game-playcount-extended">
-               <pos>0.85546875 0.640416666666667</pos><!-- 3285 1537 -->
-               <size>0 0.016666666666667</size><!-- - 40 -->
-            </text>
-            <text name="game-description">
-               <pos>0.72578125 0.841666666666667</pos><!-- 2787 2020 -->
-               <size>0.422916666666667 0.15</size><!-- 1624 360 -->
-               <fontSize>0.021666666666667</fontSize><!-- 52 -->
-               <containerScrollSpeed>0.6</containerScrollSpeed>
-            </text>
-         </view>
-      </aspectRatio>
-   </variant>
 
    <!--
    ///

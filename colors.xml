@@ -1,8 +1,8 @@
 <theme>
    <colorScheme name="dark-original,dark-custom">
       <variables>
-         <helpTextColor>818181</helpTextColor>
-         <helpIconColor>818181</helpIconColor>
+         <helpTextColor>999999</helpTextColor>
+         <helpIconColor>bbbbbb</helpIconColor>
          <helpTextColorDimmed>aaaaaa</helpTextColorDimmed>
          <helpIconColorDimmed>aaaaaa</helpIconColorDimmed>
          <backgroundColor>2d2d2d</backgroundColor>
@@ -25,7 +25,7 @@
    <colorScheme name="light-original,light-custom">
       <variables>
          <helpTextColor>999999</helpTextColor>
-         <helpIconColor>999999</helpIconColor>
+         <helpIconColor>777777</helpIconColor>
          <helpTextColorDimmed>333333</helpTextColorDimmed>
          <helpIconColorDimmed>333333</helpIconColorDimmed>
          <backgroundColor>fbfbfb</backgroundColor>
