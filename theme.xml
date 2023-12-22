@@ -225,58 +225,96 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <iterationCount>1</iterationCount>
             <onIterationsDone>image</onIterationsDone>
          </video>
-         <image name="game-metadata-background-shadow">
+         <!-- Start: Extended Metadata -->
+         <image name="game-metadata-background-shadow-extended">
             <origin>0.5 0.5</origin>
-            <path>./_inc/images/gamelist-metadata-background-shadow.png</path>
+            <path>./_inc/images/gamelist-metadata-background-shadow-extended.png</path>
             <metadataElement>true</metadataElement>
          </image>
-         <image name="game-metadata-background">
+         <image name="game-metadata-background-extended">
             <origin>0.5 0.5</origin>
-            <path>./_inc/images/${gamelistMetadataBackgroundImage}.svg</path>
+            <path>./_inc/images/${gamelistMetadataBackgroundImage}-extended.svg</path>
             <metadataElement>true</metadataElement>
          </image>
-         <rating name="game-rating">
+         <rating name="game-rating-extended">
             <origin>0.5 0.5</origin>
             <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
             <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
             <color>${gameMetadataColor}</color>
          </rating>
-         <datetime name="game-releasedate,game-lastplayed">
+         <datetime name="game-releasedate-extended,game-lastplayed-extended">
             <origin>0 0.5</origin>
             <fontPath>${fontBold}</fontPath>
             <color>${gameMetadataColor}</color>
             <lineSpacing>1</lineSpacing>
          </datetime>
-         <text name="game-players,game-genre,game-developer,game-publisher,game-playcount">
+         <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
             <origin>0 0.5</origin>
             <fontPath>${fontBold}</fontPath>
             <color>${gameMetadataColor}</color>
             <lineSpacing>1</lineSpacing>
             <defaultValue>Unknown</defaultValue>
          </text>
-         <datetime name="game-releasedate">
+         <datetime name="game-releasedate-extended">
             <metadata>releasedate</metadata>
             <defaultValue>Unknown</defaultValue>
          </datetime>
-         <text name="game-players">
+         <text name="game-players-extended">
             <metadata>players</metadata>
          </text>
-         <text name="game-genre">
+         <text name="game-genre-extended">
             <metadata>genre</metadata>
          </text>
-         <text name="game-developer">
+         <text name="game-developer-extended">
             <metadata>developer</metadata>
          </text>
-         <text name="game-publisher">
+         <text name="game-publisher-extended">
             <metadata>publisher</metadata>
          </text>
-         <datetime name="game-lastplayed">
+         <datetime name="game-lastplayed-extended">
             <metadata>lastplayed</metadata>
             <defaultValue>Never</defaultValue>
          </datetime>
-         <text name="game-playcount">
+         <text name="game-playcount-extended">
             <metadata>playcount</metadata>
          </text>
+         <!-- End: Extended Metadata -->
+         <!-- Start: Base Metadata -->
+         <image name="game-metadata-background-shadow-base">
+            <origin>0.5 0.5</origin>
+            <path>./_inc/images/gamelist-metadata-background-shadow-base.png</path>
+            <metadataElement>true</metadataElement>
+         </image>
+         <image name="game-metadata-background-base">
+            <origin>0.5 0.5</origin>
+            <path>./_inc/images/${gamelistMetadataBackgroundImage}-base.svg</path>
+            <metadataElement>true</metadataElement>
+         </image>
+         <rating name="game-rating-base">
+            <origin>0.5 0.5</origin>
+            <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
+            <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
+            <color>${gameMetadataColor}</color>
+         </rating>
+         <datetime name="game-releasedate-base">
+            <origin>0 0.5</origin>
+            <fontPath>${fontBold}</fontPath>
+            <color>${gameMetadataColor}</color>
+            <lineSpacing>1</lineSpacing>
+            <metadata>releasedate</metadata>
+            <defaultValue>Unknown</defaultValue>
+         </datetime>
+         <text name="game-genre-base">
+            <origin>0 0.5</origin>
+            <fontPath>${fontBold}</fontPath>
+            <color>${gameMetadataColor}</color>
+            <lineSpacing>1</lineSpacing>
+            <defaultValue>Unknown</defaultValue>
+            <metadata>genre</metadata>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+         </text>
+         <!-- End: Base Metadata -->
          <text name="game-description">
             <origin>0.5 1</origin>
             <fontPath>${fontRegular}</fontPath>
@@ -426,55 +464,98 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <pos>0.72578125 0.319444444444444</pos><!-- 2787 690 -->
                <maxSize>0.448958333333333 0.449074074074074</maxSize><!-- 1724 970 -->
             </video>
-            <image name="game-metadata-background-shadow">
+            <!-- Start: Extended Metadata -->
+            <image name="game-metadata-background-shadow-extended">
                <pos>0.72578125 0.634259259259259</pos><!-- 2787 1370 -->
                <size>0.433333333333333 0.138888888888889</size><!-- 1664 300 -->
+               <visible>${metadataExtended}</visible>
             </image>
-            <image name="game-metadata-background">
+            <image name="game-metadata-background-extended">
                <pos>0.72578125 0.634259259259259</pos><!-- 2787 1370 -->
                <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
+               <visible>${metadataExtended}</visible>
             </image>
-            <text name="game-players,game-genre,game-developer,game-publisher,game-playcount">
+            <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
                <fontSize>${metaDatafontSize}</fontSize>
+               <visible>${metadataExtended}</visible>
             </text>
-            <datetime name="game-releasedate,game-lastplayed">
+            <datetime name="game-releasedate-extended,game-lastplayed-extended">
                <fontSize>${metaDatafontSize}</fontSize>
+               <visible>${metadataExtended}</visible>
             </datetime>
-            <rating name="game-rating">
+            <rating name="game-rating-extended">
                <pos>0.56640625 0.590277777777778</pos><!-- 2175 1275 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </rating>
-            <datetime name="game-releasedate">
+            <datetime name="game-releasedate-extended">
                <pos>0.538020833333333 0.634259259259259</pos><!-- 2066 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </datetime>
-            <text name="game-players">
+            <text name="game-players-extended">
                <pos>0.538020833333333 0.678240740740741</pos><!-- 2066 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </text>
-            <text name="game-genre">
+            <text name="game-genre-extended">
                <pos>0.652604166666667 0.590277777777778</pos><!-- 2506 1275 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </text>
-            <text name="game-developer">
+            <text name="game-developer-extended">
                <pos>0.652604166666667 0.634259259259259</pos><!-- 2506 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </text>
-            <text name="game-publisher">
+            <text name="game-publisher-extended">
                <pos>0.652604166666667 0.678240740740741</pos><!-- 2506 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </text>
-            <datetime name="game-lastplayed">
+            <datetime name="game-lastplayed-extended">
                <pos>0.85546875 0.634259259259259</pos><!-- 3285 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </datetime>
-            <text name="game-playcount">
+            <text name="game-playcount-extended">
                <pos>0.85546875 0.678240740740741</pos><!-- 3285 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
+               <visible>${metadataExtended}</visible>
             </text>
+            <!-- End: Extended Metadata -->
+            <!-- Start: Base Metadata -->
+            <image name="game-metadata-background-shadow-base">
+               <pos>0.72578125 0.606481481481481</pos><!-- 2787 1310 -->
+               <size>0.433333333333333 0.06712962962963</size><!-- 1664 145 -->
+               <visible>${metadataBase}</visible>
+            </image>
+            <image name="game-metadata-background-base">
+               <pos>0.72578125 0.606481481481481</pos><!-- 2787 1310 -->
+               <size>0.422916666666667 0.048611111111111</size><!-- 1624 105 -->
+               <visible>${metadataBase}</visible>
+            </image>
+            <rating name="game-rating-base">
+               <pos>0.56640625 0.606018518518519</pos><!-- 2175 1309 -->
+               <size>0 ${metaDatafontSize}</size>
+               <visible>${metadataBase}</visible>
+            </rating>
+            <datetime name="game-releasedate-base">
+               <pos>0.635416666666667 0.606018518518519</pos><!-- 2440 1309 -->
+               <size>0 ${metaDatafontSize}</size>
+               <fontSize>${metaDatafontSize}</fontSize>
+               <visible>${metadataBase}</visible>
+            </datetime>
+            <text name="game-genre-base">
+               <pos>0.751041666666667 0.606018518518519</pos><!-- 3056 1309 -->
+               <size>0.18 ${metaDatafontSize}</size>
+               <fontSize>${metaDatafontSize}</fontSize>
+               <visible>${metadataBase}</visible>
+            </text>
+            <!-- End: Base Metadata -->
             <text name="game-description">
                <pos>0.72578125 0.837962962962963</pos><!-- 2787 1810 -->
-               <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
+               <size>0.422916666666667 ${descriptionHeight}</size><!-- 1624 fontSize -->
                <fontSize>${descriptionFontSize}</fontSize>
                <lineSpacing>${descriptionLineSpacing}</lineSpacing>
                <containerScrollSpeed>0.6</containerScrollSpeed>
@@ -483,22 +564,31 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <fontSize name="medium">
             <variables>
                <metaDatafontSize>0.018518518518519</metaDatafontSize><!-- 40 -->
+               <descriptionHeight>0.12037037037037</descriptionHeight><!-- 260 -->
                <descriptionFontSize>0.024074074074074</descriptionFontSize><!-- 52 -->
                <descriptionLineSpacing>1.5</descriptionLineSpacing>
+               <metadataExtended>true</metadataExtended>
+               <metadataBase>false</metadataBase>
             </variables>
          </fontSize>
          <fontSize name="large">
             <variables>
-               <metaDatafontSize>0.023148148148148</metaDatafontSize><!-- 50 -->
-               <descriptionFontSize>0.028703703703704</descriptionFontSize><!-- 62 -->
-               <descriptionLineSpacing>1.2</descriptionLineSpacing>
+               <metaDatafontSize>0.028703703703704</metaDatafontSize><!-- 62 -->
+               <descriptionHeight>0.185185185185185</descriptionHeight><!-- 400 -->
+               <descriptionFontSize>0.037037037037037</descriptionFontSize><!-- 80 -->
+               <descriptionLineSpacing>1.6</descriptionLineSpacing>
+               <metadataExtended>false</metadataExtended>
+               <metadataBase>true</metadataBase>
             </variables>
          </fontSize>
          <fontSize name="x-large">
             <variables>
-               <metaDatafontSize>0.018518518518519</metaDatafontSize><!-- 40 -->
-               <descriptionFontSize>0.024074074074074</descriptionFontSize><!-- 52 -->
-               <descriptionLineSpacing>1.5</descriptionLineSpacing>
+               <metaDatafontSize>0.028703703703704</metaDatafontSize><!-- 62 -->
+               <descriptionHeight>0.185185185185185</descriptionHeight><!-- 400 -->
+               <descriptionFontSize>0.037037037037037</descriptionFontSize><!-- 80 -->
+               <descriptionLineSpacing>1.6</descriptionLineSpacing>
+               <metadataExtended>false</metadataExtended>
+               <metadataBase>true</metadataBase>
             </variables>
          </fontSize>
       </aspectRatio>
@@ -589,49 +679,49 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <pos>0.72578125 0.295833333333333</pos><!-- 2787 710 -->
                <maxSize>0.448958333333333 0.404166666666667</maxSize><!-- 1724 970 -->
             </video>
-            <image name="game-metadata-background-shadow">
+            <image name="game-metadata-background-shadow-extended">
                <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
                <size>0.433333333333333 0.125</size><!-- 1664 300 -->
             </image>
-            <image name="game-metadata-background">
+            <image name="game-metadata-background-extended">
                <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
                <size>0.422916666666667 0.108333333333333</size><!-- 1624 260 -->
             </image>
-            <text name="game-players,game-genre,game-developer,game-publisher,game-playcount">
+            <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
                <fontSize>0.016666666666667</fontSize><!-- 40 -->
             </text>
-            <datetime name="game-releasedate,game-lastplayed">
+            <datetime name="game-releasedate-extended,game-lastplayed-extended">
                <fontSize>0.016666666666667</fontSize><!-- 40 -->
             </datetime>
-            <rating name="game-rating">
+            <rating name="game-rating-extended">
                <pos>0.56640625 0.56125</pos><!-- 2175 1347 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </rating>
-            <datetime name="game-releasedate">
+            <datetime name="game-releasedate-extended">
                <pos>0.538020833333333 0.600833333333333</pos><!-- 2066 1452 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </datetime>
-            <text name="game-players">
+            <text name="game-players-extended">
                <pos>0.538020833333333 0.640416666666667</pos><!-- 2066 1537 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </text>
-            <text name="game-genre">
+            <text name="game-genre-extended">
                <pos>0.652604166666667 0.56125</pos><!-- 2506 1347 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </text>
-            <text name="game-developer">
+            <text name="game-developer-extended">
                <pos>0.652604166666667 0.600833333333333</pos><!-- 2506 1452 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </text>
-            <text name="game-publisher">
+            <text name="game-publisher-extended">
                <pos>0.652604166666667 0.640416666666667</pos><!-- 2506 1537 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </text>
-            <datetime name="game-lastplayed">
+            <datetime name="game-lastplayed-extended">
                <pos>0.85546875 0.600833333333333</pos><!-- 3285 1452 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </datetime>
-            <text name="game-playcount">
+            <text name="game-playcount-extended">
                <pos>0.85546875 0.640416666666667</pos><!-- 3285 1537 -->
                <size>0 0.016666666666667</size><!-- - 40 -->
             </text>
