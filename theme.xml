@@ -39,25 +39,27 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <zIndex>0</zIndex>
       </image>
       <image name="background-art">
-         <origin>0.5 0</origin>
-         <pos>0.5 0</pos>
+         <origin>0 0</origin>
+         <pos>0 0</pos>
          <size>1 0</size>
-         <zIndex>3</zIndex>
+         <path>./_inc/systems/${backgroundArtPath}</path>
+         <default>./_inc/systems/${backgroundArtDefaultImage}</default>
          <interpolation>linear</interpolation>
+         <zIndex>1</zIndex>
       </image>
-      <image name="background-mask">
+      <image name="background-art-mask">
          <origin>0 1</origin>
          <pos>0 1</pos>
          <size>1 0.1</size>
          <tile>true</tile>
          <path>${spacerImage}</path>
          <color>${backgroundColor}</color>
-         <zIndex>4</zIndex>
+         <zIndex>2</zIndex>
       </image>
-      <image name="background-gradient">
+      <image name="background-art-gradient">
          <origin>0 0</origin>
-         <path>./_inc/images/${backgroundMaskImage}</path>
-         <zIndex>5</zIndex>
+         <path>./_inc/images/${backgroundArtGradientImage}</path>
+         <zIndex>3</zIndex>
       </image>
       <helpsystem name="help">
          <origin>1 1</origin>
@@ -96,8 +98,10 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    ///
    -->
    <view name="system">
-      <image name="background-art">
-         <path>./_inc/systems/${backgroundArtPath}</path>
+      <image name="system-carousel-selector-shadow">
+         <origin>0.5 0.5</origin>
+         <path>./_inc/images/system-carousel-selector-shadow.png</path>
+         <zIndex>9</zIndex>
       </image>
       <carousel name="system-carousel">
          <origin>0 0.5</origin>
@@ -124,11 +128,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <color>${systemCarouselSelectorColor}</color>
          <zIndex>11</zIndex>
       </image>
-      <image name="system-carousel-selector-shadow">
-         <origin>0.5 0.5</origin>
-         <path>./_inc/images/system-carousel-selector-shadow.png</path>
-         <zIndex>9</zIndex>
-      </image>
       <text name="system-info">
          <origin>0.5 1</origin>
          <systemdata>gamecount</systemdata>
@@ -146,7 +145,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    -->
    <view name="gamelist">
       <image name="background-art">
-         <path>./_inc/systems/${backgroundArtPath}</path>
          <opacity>${gamelistBackgroundOpacity}</opacity>
       </image>
       <image name="game-list-background-shadow">
@@ -173,46 +171,12 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
 
    <!--
    ///
-   Gamelist View: Metadata Off Variants
+   Gamelist View: Variant Defautls
    ///
    -->
    <variant name="
       gamelist-metadata-off-miximage,
-      gamelist-metadata-off-boxart
-      ">
-      <view name="gamelist">
-         <video name="game-media">
-            <origin>0.5 0.5</origin>
-            <delay>3</delay>
-            <videoCornerRadius>0.005</videoCornerRadius>
-            <pillarboxes>false</pillarboxes>
-            <iterationCount>1</iterationCount>
-            <onIterationsDone>image</onIterationsDone>
-         </video>
-      </view>
-   </variant>
-   <variant name="gamelist-metadata-off-miximage">
-      <view name="gamelist">
-         <video name="game-media">
-         <imageType>miximage,cover</imageType>
-         </video>
-      </view>
-   </variant>
-   <variant name="gamelist-metadata-off-boxart">
-      <view name="gamelist">
-         <video name="game-media">
-            <imageType>cover,miximage</imageType>
-            <imageCornerRadius>0.005</imageCornerRadius>
-         </video>
-      </view>
-   </variant>
-
-   <!--
-   ///
-   Gamelist View: Metadata On Variants
-   ///
-   -->
-   <variant name="
+      gamelist-metadata-off-boxart,
       gamelist-metadata-on-miximage,
       gamelist-metadata-on-boxart
       ">
@@ -225,13 +189,47 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <iterationCount>1</iterationCount>
             <onIterationsDone>image</onIterationsDone>
          </video>
+      </view>
+   </variant>
+   <variant name="
+      gamelist-metadata-off-miximage,
+      gamelist-metadata-on-miximage
+      ">
+      <view name="gamelist">
+         <video name="game-media">
+         <imageType>miximage,cover</imageType>
+         </video>
+      </view>
+   </variant>
+   <variant name="
+      gamelist-metadata-off-boxart,
+      gamelist-metadata-on-boxart
+      ">
+      <view name="gamelist">
+         <video name="game-media">
+            <imageType>cover,miximage</imageType>
+            <imageCornerRadius>0.005</imageCornerRadius>
+         </video>
+      </view>
+   </variant>
+
+   <!--
+   ///
+   Gamelist View: Metadata-On Variant
+   ///
+   -->
+   <variant name="
+      gamelist-metadata-on-miximage,
+      gamelist-metadata-on-boxart
+      ">
+      <view name="gamelist">
          <!-- Start: Extended Metadata -->
          <image name="game-metadata-background-shadow-extended">
             <origin>0.5 0.5</origin>
             <path>./_inc/images/gamelist-metadata-background-shadow-extended.png</path>
             <metadataElement>true</metadataElement>
          </image>
-         <image name="game-metadata-background-extended">
+         <image name="game-metadata-background-image-extended">
             <origin>0.5 0.5</origin>
             <path>./_inc/images/${gamelistMetadataBackgroundImage}-extended.svg</path>
             <metadataElement>true</metadataElement>
@@ -285,7 +283,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <path>./_inc/images/gamelist-metadata-background-shadow-base.png</path>
             <metadataElement>true</metadataElement>
          </image>
-         <image name="game-metadata-background-base">
+         <image name="game-metadata-background-image-base">
             <origin>0.5 0.5</origin>
             <path>./_inc/images/${gamelistMetadataBackgroundImage}-base.svg</path>
             <metadataElement>true</metadataElement>
@@ -325,21 +323,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </text>
       </view>
    </variant>
-   <variant name="gamelist-metadata-on-miximage">
-      <view name="gamelist">
-         <video name="game-media">
-         <imageType>miximage,cover</imageType>
-         </video>
-      </view>
-   </variant>
-   <variant name="gamelist-metadata-on-boxart">
-      <view name="gamelist">
-         <video name="game-media">
-            <imageType>cover,miximage</imageType>
-            <imageCornerRadius>0.005</imageCornerRadius>
-         </video>
-      </view>
-   </variant>
 
    <!--
    ///
@@ -348,7 +331,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    -->
    <aspectRatio name="16:9">
       <view name="system,gamelist">
-         <image name="background-gradient">
+         <image name="background-art-gradient">
             <pos>0 0.481481481481481</pos><!-- 0 1040 -->
             <size>1 0.462962962962963</size><!-- 100% 1000 -->
          </image>
@@ -358,6 +341,10 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </helpsystem>
       </view>
       <view name="system">
+         <image name="system-carousel-selector-shadow">
+            <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
+            <size>0.203125 0.361111111111111</size><!-- 780 780 -->
+         </image>
          <carousel name="system-carousel">
             <pos>0 0.715277777777778</pos><!-- 0 1545 -->
             <size>1 0.319444444444444</size><!-- 100% 690 -->
@@ -367,10 +354,6 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <image name="system-carousel-selector">
             <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
             <size>0.182291666666667 0.324074074074074</size><!-- 700 700 -->
-         </image>
-         <image name="system-carousel-selector-shadow">
-            <pos>0.227083333333333 0.715277777777778</pos><!-- 872 1545 -->
-            <size>0.203125 0.361111111111111</size><!-- 780 780 -->
          </image>
          <text name="system-info">
             <pos>0.227083333333333 0.944444444444444</pos><!-- 872 2040 -->
@@ -441,10 +424,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </variables>
       </fontSize>
    </aspectRatio>
-   <variant name="
-      gamelist-metadata-off-miximage,
-      gamelist-metadata-off-boxart
-      ">
+   <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
       <aspectRatio name="16:9">
          <view name="gamelist">
             <video name="game-media">
@@ -454,10 +434,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </view>
       </aspectRatio>
    </variant>
-   <variant name="
-      gamelist-metadata-on-miximage,
-      gamelist-metadata-on-boxart
-      ">
+   <variant name="gamelist-metadata-on-miximage,gamelist-metadata-on-boxart">
       <aspectRatio name="16:9">
          <view name="gamelist">
             <video name="game-media">
@@ -470,7 +447,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <size>0.433333333333333 0.138888888888889</size><!-- 1664 300 -->
                <visible>${metadataExtended}</visible>
             </image>
-            <image name="game-metadata-background-extended">
+            <image name="game-metadata-background-image-extended">
                <pos>0.72578125 0.634259259259259</pos><!-- 2787 1370 -->
                <size>0.422916666666667 0.12037037037037</size><!-- 1624 260 -->
                <visible>${metadataExtended}</visible>
@@ -491,37 +468,30 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <datetime name="game-releasedate-extended">
                <pos>0.538020833333333 0.634259259259259</pos><!-- 2066 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </datetime>
             <text name="game-players-extended">
                <pos>0.538020833333333 0.678240740740741</pos><!-- 2066 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </text>
             <text name="game-genre-extended">
                <pos>0.652604166666667 0.590277777777778</pos><!-- 2506 1275 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </text>
             <text name="game-developer-extended">
                <pos>0.652604166666667 0.634259259259259</pos><!-- 2506 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </text>
             <text name="game-publisher-extended">
                <pos>0.652604166666667 0.678240740740741</pos><!-- 2506 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </text>
             <datetime name="game-lastplayed-extended">
                <pos>0.85546875 0.634259259259259</pos><!-- 3285 1370 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </datetime>
             <text name="game-playcount-extended">
                <pos>0.85546875 0.678240740740741</pos><!-- 3285 1465 -->
                <size>0 ${metaDatafontSize}</size><!-- - 40 -->
-               <visible>${metadataExtended}</visible>
             </text>
             <!-- End: Extended Metadata -->
             <!-- Start: Base Metadata -->
@@ -530,7 +500,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <size>0.433333333333333 0.06712962962963</size><!-- 1664 145 -->
                <visible>${metadataBase}</visible>
             </image>
-            <image name="game-metadata-background-base">
+            <image name="game-metadata-background-image-base">
                <pos>0.72578125 0.606481481481481</pos><!-- 2787 1310 -->
                <size>0.422916666666667 0.048611111111111</size><!-- 1624 105 -->
                <visible>${metadataBase}</visible>
@@ -601,7 +571,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
    -->
    <aspectRatio name="16:10">
       <view name="system,gamelist">
-         <image name="background-gradient">
+         <image name="background-art-gradient">
             <pos>0 0.483333333333333</pos><!-- 0 1160 -->
             <size>1 0.416666666666667</size><!-- 0 1000 -->
          </image>
@@ -656,10 +626,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </image>
       </view>
    </aspectRatio>
-   <variant name="
-      gamelist-metadata-off-miximage,
-      gamelist-metadata-off-boxart
-      ">
+   <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
       <aspectRatio name="16:10">
          <view name="gamelist">
             <video name="game-media">
@@ -669,10 +636,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          </view>
       </aspectRatio>
    </variant>
-   <variant name="
-      gamelist-metadata-on-miximage,
-      gamelist-metadata-on-boxart
-      ">
+   <variant name="gamelist-metadata-on-miximage,gamelist-metadata-on-boxart">
       <aspectRatio name="16:10">
          <view name="gamelist">
             <video name="game-media">
@@ -683,7 +647,7 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
                <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
                <size>0.433333333333333 0.125</size><!-- 1664 300 -->
             </image>
-            <image name="game-metadata-background-extended">
+            <image name="game-metadata-background-image-extended">
                <pos>0.72578125 0.600833333333333</pos><!-- 2787 1442 -->
                <size>0.422916666666667 0.108333333333333</size><!-- 1624 260 -->
             </image>
