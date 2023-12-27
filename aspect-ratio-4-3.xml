@@ -23,19 +23,19 @@ based on 3840x2880
    </view>
    <fontSize name="medium">
       <variables>
-         <helpSystemFontSize>0.018055555555556</helpSystemFontSize><!-- 52 -->
+         <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 80 -->
          <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
       </variables>
    </fontSize>
    <fontSize name="large">
       <variables>
-         <helpSystemFontSize>0.020833333333333</helpSystemFontSize><!-- 60 -->
+         <helpSystemFontSize>0.034722222222222</helpSystemFontSize><!-- 100 -->
          <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
       </variables>
    </fontSize>
    <fontSize name="x-large">
       <variables>
-         <helpSystemFontSize>0.025694444444444</helpSystemFontSize><!-- 74 -->
+         <helpSystemFontSize>0.034722222222222</helpSystemFontSize><!-- 100 -->
          <helpSystemEntrySpacing>0.015</helpSystemEntrySpacing>
       </variables>
    </fontSize>
@@ -47,27 +47,28 @@ based on 3840x2880
    -->
    <view name="system">
       <image name="system-carousel-selector-shadow">
-         <pos>0.227083333333333 0.578125</pos><!-- 872 1665 -->
-         <size>0.255208333333333 0.340277777777778</size><!-- 980 980 -->
+         <pos>0.35 0.677083333333333</pos><!-- 1344 1950 -->
+         <size>0.3359375 0.447916666666667</size><!-- 1290 1290 -->
       </image>
       <carousel name="system-carousel">
-         <pos>0 0.578125</pos><!-- 0 1665 -->
-         <size>1 0.309027777777778</size><!-- 100% 890 -->
-         <itemSize>0.208333333333333 0.277777777777778</itemSize><!-- 800 800 -->
+         <pos>0 0.677083333333333</pos><!-- 0 1950 -->
+         <size>1 0.399305555555556</size><!-- 100% 1150 -->
+         <itemSize>0.260416666666667 0.347222222222222</itemSize><!-- 1000 1000 -->
          <fontSize>${systemCarouselFontSize}</fontSize>
-         <maxItemCount>4</maxItemCount>
+         <maxItemCount>3.25</maxItemCount>
+         <horizontalOffset>-0.15</horizontalOffset>
+         <selectedItemMargins>0.015 0.015</selectedItemMargins>
       </carousel>
       <image name="system-carousel-selector">
-         <pos>0.227083333333333 0.578125</pos><!-- 872 1665 -->
-         <size>0.234375 0.3125</size><!-- 900 900 -->
+         <pos>0.35 0.677083333333333</pos><!-- 1344 1950 -->
+         <size>0.299479166666667 0.399305555555556</size><!-- 1150 1150 -->
       </image>
       <text name="system-info">
-         <pos>0.227083333333333 0.775</pos><!-- 872 2232 -->
-         <size>0.390625 ${systemInfoFontSize}</size><!-- 1500 fontSize -->
-         <fontSize>${systemInfoFontSize}</fontSize>
+         <visible>false</visible>
       </text>
       <helpsystem name="help">
-         <pos>0.947916666666667 0.770833333333333</pos><!-- 3640 2220 -->
+         <origin>0.5 1</origin>
+         <pos>0.5 0.954861111111111</pos><!-- 50% 2750 -->
       </helpsystem>
    </view>
    <fontSize name="medium">
