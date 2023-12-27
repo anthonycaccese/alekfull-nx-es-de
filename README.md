@@ -34,7 +34,7 @@ This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc)
    - `Large` - good for display on large handheld screens at 6 inches or larger
    - `Extra Large` - good for display on small handheld screens at 6 inches or below
 
-### Preview of the Theme Variants and Color Schemes
+### Preview of Variants and Color Schemes
 
 | Dark | Light |
 | --- | --- |
@@ -46,6 +46,9 @@ This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc)
 
 | Medium | Large | Extra Large |
 | --- | --- | --- |
+| <img alt="Screenshot 2023-12-27 at 10 59 17 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/32884694-0668-4b71-b793-254ef85c0a5a"> | <img alt="Screenshot 2023-12-27 at 11 31 24 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/d3a22a1b-24eb-4a2e-8318-2694b758151a"> | <img alt="Screenshot 2023-12-27 at 11 31 34 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/648f2c21-998d-4e16-839a-7e7b6d41d504">
+
+
 
 ## **Additional Notes**
 
