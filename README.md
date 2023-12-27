@@ -48,7 +48,33 @@ This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc)
 | --- | --- | --- |
 | <img alt="Screenshot 2023-12-27 at 10 59 17 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/32884694-0668-4b71-b793-254ef85c0a5a"> | <img alt="Screenshot 2023-12-27 at 11 31 24 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/d3a22a1b-24eb-4a2e-8318-2694b758151a"> | <img alt="Screenshot 2023-12-27 at 11 31 34 AM" src="https://github.com/anthonycaccese/alekfull-nx-es-de/assets/1454947/648f2c21-998d-4e16-839a-7e7b6d41d504">
 
+## **Theme Customizations**
 
+The theme allows customizations to artwork without the need to edit the source XML.  This enables you to change the look of the theme and still retain any changes when the root theme is updated.
+
+### Start Here 
+- Make sure `Light (Custom Artwork)` or `Dark (Custom Artwork)` is selected from `Menu > UI Settings > Theme Variant`
+- This setting changes the directories that the theme looks for artwork in and sets up the ability for you to add custom artwork.
+
+### Backgrounds
+- Create a folder called `custom-backgrounds` in ES-DE's theme directory at: `ES-DE/themes/alekfull-nx-es-de/_inc/systems`
+- Upload your custom background images to that folder
+- They can be named:
+    - _default.jpg
+    - ${system.theme}.jpg
+- `_default.jpg` can be used for creating a single image that is used for all systems OR a fallback for systems that you did not create a custom image for.
+- `${system.theme}.jpg` should be named for the system you are looking to override.  For example if you wanted to override the artwork for `snes` you would create an image called `snes.jpg` in the backgrounds folder.
+- If a given ${system.theme}.jpg image is not found it will use _default.jpg image so make sure to at least create that image.
+
+### Carousel Icons
+- Create a folder called `custom-carousel-icons` in ES-DE's theme directory at: `ES-DE/themes/alekfull-nx-es-de/_inc/systems`
+- Upload your custom carousel icons to that folder
+- They can be named:
+    - _default.jpg
+    - ${system.theme}.jpg
+- `_default.jpg` can be used for creating a single image that is used for all systems OR a fallback for systems that you did not create a custom image for.
+- `${system.theme}.jpg` should be named for the system you are looking to override.  For example if you wanted to override the artwork for `snes` you would create an image called `snes.jpg` in the backgrounds folder.
+- If a given ${system.theme}.jpg image is not found it will use _default.jpg image so make sure to at least create that image.
 
 ## **Additional Notes**
 
