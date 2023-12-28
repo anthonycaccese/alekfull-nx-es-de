@@ -61,7 +61,7 @@ based on 3840x2160
          <size>0.182291666666667 0.324074074074074</size><!-- 700 700 -->
       </image>
       <text name="system-info">
-         <pos>0.227083333333333 0.930555555555556</pos><!-- 872 2010 -->
+         <pos>0.227083333333333 0.937962962962963</pos><!-- 872 2026 -->
          <size>0.390625 ${systemInfoFontSize}</size><!-- 1500 fontSize -->
          <fontSize>${systemInfoFontSize}</fontSize>
       </text>

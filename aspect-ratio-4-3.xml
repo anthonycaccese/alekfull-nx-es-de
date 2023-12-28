@@ -35,7 +35,7 @@ based on 3840x2880
    </fontSize>
    <fontSize name="x-large">
       <variables>
-         <helpSystemFontSize>0.034722222222222</helpSystemFontSize><!-- 100 -->
+         <helpSystemFontSize>0.041666666666667</helpSystemFontSize><!-- 120 -->
          <helpSystemEntrySpacing>0.015</helpSystemEntrySpacing>
       </variables>
    </fontSize>
@@ -47,11 +47,11 @@ based on 3840x2880
    -->
    <view name="system">
       <image name="system-carousel-selector-shadow">
-         <pos>0.35 0.677083333333333</pos><!-- 1344 1950 -->
+         <pos>0.35 0.642361111111111</pos><!-- 1344 1850 -->
          <size>0.3359375 0.447916666666667</size><!-- 1290 1290 -->
       </image>
       <carousel name="system-carousel">
-         <pos>0 0.677083333333333</pos><!-- 0 1950 -->
+         <pos>0 0.642361111111111</pos><!-- 0 1850 -->
          <size>1 0.399305555555556</size><!-- 100% 1150 -->
          <itemSize>0.260416666666667 0.347222222222222</itemSize><!-- 1000 1000 -->
          <fontSize>${systemCarouselFontSize}</fontSize>
@@ -60,33 +60,30 @@ based on 3840x2880
          <selectedItemMargins>0.015 0.015</selectedItemMargins>
       </carousel>
       <image name="system-carousel-selector">
-         <pos>0.35 0.677083333333333</pos><!-- 1344 1950 -->
-         <size>0.299479166666667 0.399305555555556</size><!-- 1150 1150 -->
+         <pos>0.35 0.642361111111111</pos><!-- 1344 1850 -->
+         <size>0.302083333333333 0.402777777777778</size><!-- 1160 1160 -->
       </image>
       <text name="system-info">
          <visible>false</visible>
       </text>
       <helpsystem name="help">
          <origin>0.5 1</origin>
-         <pos>0.5 0.954861111111111</pos><!-- 50% 2750 -->
+         <pos>0.5 0.9375</pos><!-- 50% 2700 -->
       </helpsystem>
    </view>
    <fontSize name="medium">
       <variables>
-         <systemCarouselFontSize>0.015277777777778</systemCarouselFontSize><!-- 44 -->
-         <systemInfoFontSize>0.022222222222222</systemInfoFontSize><!-- 64 -->
+         <systemCarouselFontSize>0.024305555555556</systemCarouselFontSize><!-- 70 -->
       </variables>
    </fontSize>
    <fontSize name="large">
       <variables>
-         <systemCarouselFontSize>0.020833333333333</systemCarouselFontSize><!-- 60 -->
-         <systemInfoFontSize>0.027083333333333</systemInfoFontSize><!-- 78 -->
+         <systemCarouselFontSize>0.03125</systemCarouselFontSize><!-- 90 -->
       </variables>
    </fontSize>
    <fontSize name="x-large">
       <variables>
-         <systemCarouselFontSize>0.020833333333333</systemCarouselFontSize><!-- 60 -->
-         <systemInfoFontSize>0.03125</systemInfoFontSize><!-- 90 -->
+         <systemCarouselFontSize>0.03125</systemCarouselFontSize><!-- 90 -->
       </variables>
    </fontSize>
 
@@ -97,25 +94,27 @@ based on 3840x2880
    -->
    <view name="gamelist">
       <image name="game-list-background-shadow">
-         <pos>0.256770833333333 0.45625</pos><!-- 986 1095 -->
-         <size>0.440104166666667 0.8</size><!-- 1690 1920 -->
-         <path>./_inc/images/16-10-gamelist-background-shadow.png</path>
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.4375 0.777777777777778</size><!-- 1680 2240 -->
+         <path>./_inc/images/4-3-gamelist-background-shadow.png</path>
       </image>
       <image name="game-list-background">
-         <pos>0.049479166666667 0.077083333333333</pos><!-- 190 185 -->
-         <size>0.4140625 0.758333333333333</size><!-- 1590 1820 -->
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.421875 0.756944444444444</size><!-- 1620 2180 -->
          <path>${gamelistBackgroundImageCalculated}</path>
       </image>
       <textlist name="game-list">
-         <pos>0.082291666666667 0.105</pos><!-- 316 252 -->
-         <size>0.348958333333333 0.708333333333333</size><!-- 1340 1700 -->
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.369791666666667 0.694444444444444</size><!-- 1420 2000 -->
          <fontSize>${gamelistFontSize}</fontSize>
          <selectorHeight>${gamelistSelectorHeight}</selectorHeight>
          <lineSpacing>${gamelistLineSpacing}</lineSpacing>
+         <horizontalMargin>0.012</horizontalMargin>
       </textlist>
       <image name="system-logo">
-         <pos>0.057291666666667 0.9125</pos><!-- 220 2190 -->
-         <maxSize>0.130208333333333 0.041666666666667</maxSize><!-- 500 100 -->
          <visible>${displaySystemLogo}</visible>
       </image>
       <helpsystem name="help">
@@ -125,35 +124,35 @@ based on 3840x2880
    </view>
    <fontSize name="medium">
       <variables>
-         <gamelistBackgroundImageCalculated>./_inc/images/16-10-${gamelistBackgroundImage}-medium.svg</gamelistBackgroundImageCalculated>
-         <gamelistFontSize>0.0225</gamelistFontSize><!-- 54 -->
-         <gamelistSelectorHeight>0.035833333333333</gamelistSelectorHeight><!-- 86 -->
-         <gamelistLineSpacing>1.851851851851852</gamelistLineSpacing><!-- 100/54 -->
-         <displaySystemLogo>true</displaySystemLogo>
-         <gamelistHelpOrigin>1 1</gamelistHelpOrigin>
-         <gamelistHelpPos>0.947916666666667 0.925</gamelistHelpPos><!-- 3640 2220 -->
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-medium.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.027777777777778</gamelistFontSize><!-- 80 -->
+         <gamelistSelectorHeight>0.043055555555556</gamelistSelectorHeight><!-- 124 -->
+         <gamelistLineSpacing>1.5625</gamelistLineSpacing><!-- 125/80 -->
+         <displaySystemLogo>false</displaySystemLogo>
+         <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
+         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
       </variables>
    </fontSize>
    <fontSize name="large">
       <variables>
-         <gamelistBackgroundImageCalculated>./_inc/images/16-10-${gamelistBackgroundImage}-large.svg</gamelistBackgroundImageCalculated>
-         <gamelistFontSize>0.04</gamelistFontSize><!-- 94 -->
-         <gamelistSelectorHeight>0.065</gamelistSelectorHeight><!-- 156 -->
-         <gamelistLineSpacing>1.770833333333333</gamelistLineSpacing><!-- 170/94 -->
-         <displaySystemLogo>true</displaySystemLogo>
-         <gamelistHelpOrigin>1 1</gamelistHelpOrigin>
-         <gamelistHelpPos>0.947916666666667 0.925</gamelistHelpPos><!-- 3640 2220 -->
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-large.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.041666666666667</gamelistFontSize><!-- 120 -->
+         <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
+         <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
+         <displaySystemLogo>false</displaySystemLogo>
+         <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
+         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
       </variables>
    </fontSize>
    <fontSize name="x-large">
       <variables>
-         <gamelistBackgroundImageCalculated>./_inc/images/16-10-${gamelistBackgroundImage}-xlarge.svg</gamelistBackgroundImageCalculated>
-         <gamelistFontSize>0.04</gamelistFontSize><!-- 94 -->
-         <gamelistSelectorHeight>0.065</gamelistSelectorHeight><!-- 156 -->
-         <gamelistLineSpacing>1.770833333333333</gamelistLineSpacing><!-- 170/94 -->
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-xlarge.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.041666666666667</gamelistFontSize><!-- 120 -->
+         <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
+         <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
          <displaySystemLogo>false</displaySystemLogo>
          <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
-         <gamelistHelpPos>0.5 0.925</gamelistHelpPos><!-- 50% 2220 -->
+         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
       </variables>
    </fontSize>
 
@@ -165,8 +164,8 @@ based on 3840x2880
    <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
       <view name="gamelist">
          <video name="game-media">
-            <pos>0.72578125 0.459166666666667</pos><!-- 2787 1102 -->
-            <maxSize>0.448958333333333 0.708333333333333</maxSize><!-- 1724 1700 -->
+            <pos>0.736979166666667 0.454861111111111</pos><!-- 2830 1310 -->
+            <maxSize>0.421875 0.694444444444444</maxSize><!-- 1620 2000 -->
          </video>
       </view>
    </variant>
