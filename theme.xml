@@ -320,6 +320,35 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
             <letterCase>capitalize</letterCase>
          </text>
          <!-- End: Base Metadata -->
+         <!-- Start: Min Metadata -->
+         <image name="game-metadata-background-shadow-min">
+            <origin>0.5 0.5</origin>
+            <path>./_inc/images/gamelist-metadata-background-shadow-min.png</path>
+            <metadataElement>true</metadataElement>
+         </image>
+         <image name="game-metadata-background-image-min">
+            <origin>0.5 0.5</origin>
+            <path>./_inc/images/${gamelistMetadataBackgroundImage}-min.svg</path>
+            <metadataElement>true</metadataElement>
+         </image>
+         <rating name="game-rating-min">
+            <origin>0.5 0.5</origin>
+            <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
+            <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
+            <color>${gameMetadataColor}</color>
+            <overlay>false</overlay>
+         </rating>
+         <datetime name="game-releasedate-min">
+            <origin>0 0.5</origin>
+            <fontPath>${fontBold}</fontPath>
+            <color>${gameMetadataColor}</color>
+            <lineSpacing>1</lineSpacing>
+            <metadata>releasedate</metadata>
+            <defaultValue>Unknown</defaultValue>
+            <horizontalAlignment>center</horizontalAlignment>
+            <format>%Y-%m</format>
+         </datetime>
+         <!-- End: Min Metadata -->
          <text name="game-description">
             <origin>0.5 1</origin>
             <fontPath>${fontRegular}</fontPath>

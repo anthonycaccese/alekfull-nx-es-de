@@ -263,6 +263,20 @@ based on 3840x2400
             <visible>${metadataBase}</visible>
          </text>
          <!-- End: Base Metadata -->
+         <!-- Start: Min Metadata -->
+         <image name="game-metadata-background-shadow-min">
+            <visible>${metadataMin}</visible>
+         </image>
+         <image name="game-metadata-background-image-min">
+            <visible>${metadataMin}</visible>
+         </image>
+         <rating name="game-rating-min">
+            <visible>${metadataMin}</visible>
+         </rating>
+         <datetime name="game-releasedate-min">
+            <visible>${metadataMin}</visible>
+         </datetime>
+         <!-- End: Min Metadata -->
          <text name="game-description">
             <pos>0.72578125 0.841666666666667</pos><!-- 2787 2020 -->
             <size>0.422916666666667 ${descriptionHeight}</size><!-- 1624 descriptionHeight -->
@@ -278,6 +292,7 @@ based on 3840x2400
             <descriptionLineSpacing>1.5</descriptionLineSpacing>
             <metadataExtended>true</metadataExtended>
             <metadataBase>false</metadataBase>
+            <metadataMin>false</metadataMin>
          </variables>
       </fontSize>
       <fontSize name="large">
@@ -288,6 +303,7 @@ based on 3840x2400
             <descriptionLineSpacing>1.5</descriptionLineSpacing>
             <metadataExtended>false</metadataExtended>
             <metadataBase>true</metadataBase>
+            <metadataMin>false</metadataMin>
          </variables>
       </fontSize>
       <fontSize name="x-large">
@@ -298,6 +314,7 @@ based on 3840x2400
             <descriptionLineSpacing>1.5</descriptionLineSpacing>
             <metadataExtended>false</metadataExtended>
             <metadataBase>true</metadataBase>
+            <metadataMin>false</metadataMin>
          </variables>
       </fontSize>
    </variant>

@@ -8,8 +8,8 @@
          <backgroundColor>2d2d2d</backgroundColor>
          <backgroundArtGradientImage>background-art-gradient-dark.png</backgroundArtGradientImage>
          <systemInfoColor>cccccc</systemInfoColor>
-         <systemCarouselTextColor>cccccc</systemCarouselTextColor>
-         <systemCarouselTextBackgroundColor>3d3d3d</systemCarouselTextBackgroundColor>
+         <systemCarouselTextColor>eeeeee</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>000000</systemCarouselTextBackgroundColor>
          <gamelistLogoColor>cccccc</gamelistLogoColor>
          <gamelistBackgroundImage>gamelist-background-dark</gamelistBackgroundImage>
          <gamelistBackgroundOpacity>0.05</gamelistBackgroundOpacity>
@@ -31,8 +31,8 @@
          <backgroundColor>fbfbfb</backgroundColor>
          <backgroundArtGradientImage>background-art-gradient-light.png</backgroundArtGradientImage>
          <systemInfoColor>555555</systemInfoColor>
-         <systemCarouselTextColor>444444</systemCarouselTextColor>
-         <systemCarouselTextBackgroundColor>aaaaaa</systemCarouselTextBackgroundColor>
+         <systemCarouselTextColor>ffffff</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>111111</systemCarouselTextBackgroundColor>
          <gamelistLogoColor>555555</gamelistLogoColor>
          <gamelistBackgroundImage>gamelist-background-light</gamelistBackgroundImage>
          <gamelistBackgroundOpacity>0.2</gamelistBackgroundOpacity>

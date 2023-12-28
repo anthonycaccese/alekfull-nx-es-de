@@ -70,11 +70,8 @@ The theme allows customizations to artwork without the need to edit the source X
 - Create a folder called `custom-carousel-icons` in ES-DE's theme directory at: `ES-DE/themes/alekfull-nx-es-de/_inc/systems`
 - Upload your custom carousel icons to that folder
 - They can be named:
-    - _default.jpg
     - ${system.theme}.jpg
-- `_default.jpg` can be used for creating a single image that is used for all systems OR a fallback for systems that you did not create a custom image for.
 - `${system.theme}.jpg` should be named for the system you are looking to override.  For example if you wanted to override the artwork for `snes` you would create an image called `snes.jpg` in the backgrounds folder.
-- If a given ${system.theme}.jpg image is not found it will use _default.jpg image so make sure to at least create that image.
 
 ## **Additional Notes**
 
