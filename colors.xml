@@ -55,10 +55,10 @@
    </colorScheme>
    <colorScheme name="dark-custom,light-custom">
       <variables>
-         <systemCarouselSelectorColor>ffffff</systemCarouselSelectorColor>
-         <systemCarouselArtPath>custom-carousel-icons/${system.theme}.webp</systemCarouselArtPath>
-         <backgroundArtPath>custom-backgrounds/${system.theme}.webp</backgroundArtPath>
-         <backgroundArtDefaultImage>custom-backgrounds/_default.webp</backgroundArtDefaultImage>
+         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <systemCarouselArtPath>custom-carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>custom-backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>custom-backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
 </theme>
