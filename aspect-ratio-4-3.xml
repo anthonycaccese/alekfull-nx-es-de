@@ -1,5 +1,5 @@
 <!--
-16:10 resolution: 
+4:3 resolution: 
 based on 3840x2880
 -->
 <theme>
@@ -121,6 +121,92 @@ based on 3840x2880
          <origin>${gamelistHelpOrigin}</origin>
          <pos>${gamelistHelpPos}</pos>
       </helpsystem>
+      <!-- Custom Help System -->
+      <image name="custom-help-option-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.063802083333333 0.918055555555556</pos><!-- 245 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-back.svg</path>
+      </image>
+      <text name="custom-help-option-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.09921875 0.918055555555556</pos><!-- 381 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>OPTIONS</text>
+      </text>
+      <image name="custom-help-menu-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.2703125 0.918055555555556</pos><!-- 1038 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-start.svg</path>
+      </image>
+      <text name="custom-help-menu-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.305729166666667 0.918055555555556</pos><!-- 1174 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>MENU</text>
+      </text>
+      <image name="custom-help-select-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.41640625 0.918055555555556</pos><!-- 1599 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-south.svg</path>
+      </image>
+      <text name="custom-help-select-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.451822916666667 0.918055555555556</pos><!-- 1735 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>SELECT</text>
+      </text>
+      <image name="custom-help-back-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.591927083333333 0.918055555555556</pos><!-- 2273 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-east.svg</path>
+      </image>
+      <text name="custom-help-back-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.62734375 0.918055555555556</pos><!-- 2409 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>BACK</text>
+      </text>
+      <image name="custom-help-fav-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.73671875 0.918055555555556</pos><!-- 2273 2829 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-north.svg</path>
+      </image>
+      <text name="custom-help-fav-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.772135416666667 0.918055555555556</pos><!-- 2409 2965 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>FAVORITE</text>
+      </text>
    </view>
    <fontSize name="medium">
       <variables>
@@ -131,6 +217,7 @@ based on 3840x2880
          <displaySystemLogo>false</displaySystemLogo>
          <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
          <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>false</customHelpSystem>
       </variables>
    </fontSize>
    <fontSize name="large">
@@ -140,8 +227,9 @@ based on 3840x2880
          <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
          <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
          <displaySystemLogo>false</displaySystemLogo>
-         <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
-         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
+         <gamelistHelpOrigin>0 0</gamelistHelpOrigin>
+         <gamelistHelpPos>1 1</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>true</customHelpSystem>
       </variables>
    </fontSize>
    <fontSize name="x-large">
@@ -151,8 +239,9 @@ based on 3840x2880
          <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
          <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
          <displaySystemLogo>false</displaySystemLogo>
-         <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
-         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
+         <gamelistHelpOrigin>0 0</gamelistHelpOrigin>
+         <gamelistHelpPos>1 1</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>true</customHelpSystem>
       </variables>
    </fontSize>
 

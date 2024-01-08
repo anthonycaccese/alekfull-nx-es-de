@@ -34,7 +34,7 @@
    </fontSize>
    <fontSize name="large">
       <variables>
-         <displayCustomCollectionName>true</displayCustomCollectionName>
+         <displayCustomCollectionName>false</displayCustomCollectionName>
       </variables>
    </fontSize>
    <fontSize name="x-large">
