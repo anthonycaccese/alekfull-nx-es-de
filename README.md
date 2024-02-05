@@ -9,6 +9,7 @@ This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc)
 - Updated system image names to match the standard used by ES-DE
 - Added a 16:10 Layout Variant
 - Added navigation sound set for ES-DE
+- Replaced some images with new versions created by ClassicxCola ([Thread](https://www.reddit.com/r/retroid/comments/1049daq/im_happy_to_announce_the_release_of_colafulldx_a/))
 
 ## **Preview**
 
@@ -79,7 +80,8 @@ The theme allows customizations to artwork without the need to edit the source X
 * If you use Batocera... then check out the original version by fagnerpc [here](https://github.com/fagnerpc/Alekfull-NX).
 
 ## **Acknowledgments**
-All artwork and layouts were designed and created by [fagnerpc](https://github.com/fagnerpc)
+- All original artwork and layouts were designed and created by [fagnerpc](https://github.com/fagnerpc)
+- Some artwork created by ClassicxCola ([Thread](https://www.reddit.com/r/retroid/comments/1049daq/im_happy_to_announce_the_release_of_colafulldx_a/))
 
 ## **License**
 Creative Commons CC-BY-NC-SA - https://creativecommons.org/licenses/by-nc-sa/2.0/
