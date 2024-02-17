@@ -1,11 +1,11 @@
 # Alekfull NX (ES-DE Version)
-This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc) for the version of EmulationStation used in [ES-DE](https://es-de.org/) v2.x
+This is port of the AlekFull NX theme by [fagnerpc](https://github.com/fagnerpc) for the version of EmulationStation used in [ES-DE](https://es-de.org/)
 
 **All artwork and layouts were designed and created by fagnerpc.  I simply made changes to the XML to make the theme compatible with ES-DE. The original version of the theme can be found [here](https://github.com/fagnerpc/Alekfull-NX)**
 
 ## Changes Made
 
-- Removed all Batocera specific elements to make the theme compatible with ES-DE v2.x
+- Removed all Batocera specific elements to make the theme compatible with ES-DE
 - Updated system image names to match the standard used by ES-DE
 - Added a 16:10 Layout Variant
 - Added navigation sound set for ES-DE
