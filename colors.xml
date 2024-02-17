@@ -1,22 +1,23 @@
 <theme>
    <colorScheme name="dark-original,dark-custom">
       <variables>
-         <helpTextColor>818181</helpTextColor>
-         <helpIconColor>818181</helpIconColor>
+         <helpTextColor>999999</helpTextColor>
+         <helpIconColor>bbbbbb</helpIconColor>
          <helpTextColorDimmed>aaaaaa</helpTextColorDimmed>
          <helpIconColorDimmed>aaaaaa</helpIconColorDimmed>
          <backgroundColor>2d2d2d</backgroundColor>
+         <backgroundArtGradientImage>background-art-gradient-dark.png</backgroundArtGradientImage>
          <systemInfoColor>cccccc</systemInfoColor>
-         <systemCarouselTextColor>cccccc</systemCarouselTextColor>
-         <systemCarouselTextBackgroundColor>3d3d3d</systemCarouselTextBackgroundColor>
-         <backgroundMaskImage>background-mask-dark.png</backgroundMaskImage>
-         <systemLogoColor>cccccc</systemLogoColor>
+         <systemCarouselTextColor>eeeeee</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>000000</systemCarouselTextBackgroundColor>
+         <gamelistLogoColor>cccccc</gamelistLogoColor>
          <gamelistBackgroundImage>gamelist-background-dark</gamelistBackgroundImage>
+         <gamelistBackgroundOpacity>0.05</gamelistBackgroundOpacity>
          <gamelistMetadataBackgroundImage>gamelist-metadata-background-dark</gamelistMetadataBackgroundImage>
-         <gamelistSelectorColor>404040</gamelistSelectorColor>
+         <gamelistSelectorColor>777777</gamelistSelectorColor>
          <gamelistSelectedColor>ffffff</gamelistSelectedColor>
-         <gamelistPrimaryColor>808080</gamelistPrimaryColor>
-         <gamelistSecondaryColor>808080</gamelistSecondaryColor>
+         <gamelistPrimaryColor>777777</gamelistPrimaryColor>
+         <gamelistSecondaryColor>777777</gamelistSecondaryColor>
          <gameDescriptionColor>ffffff</gameDescriptionColor>
          <gameMetadataColor>bbbbbb</gameMetadataColor>
       </variables>
@@ -24,16 +25,17 @@
    <colorScheme name="light-original,light-custom">
       <variables>
          <helpTextColor>999999</helpTextColor>
-         <helpIconColor>999999</helpIconColor>
+         <helpIconColor>777777</helpIconColor>
          <helpTextColorDimmed>333333</helpTextColorDimmed>
          <helpIconColorDimmed>333333</helpIconColorDimmed>
          <backgroundColor>fbfbfb</backgroundColor>
+         <backgroundArtGradientImage>background-art-gradient-light.png</backgroundArtGradientImage>
          <systemInfoColor>555555</systemInfoColor>
-         <systemCarouselTextColor>444444</systemCarouselTextColor>
-         <systemCarouselTextBackgroundColor>aaaaaa</systemCarouselTextBackgroundColor>
-         <backgroundMaskImage>background-mask-light.png</backgroundMaskImage>
-         <systemLogoColor>555555</systemLogoColor>
+         <systemCarouselTextColor>ffffff</systemCarouselTextColor>
+         <systemCarouselTextBackgroundColor>111111</systemCarouselTextBackgroundColor>
+         <gamelistLogoColor>555555</gamelistLogoColor>
          <gamelistBackgroundImage>gamelist-background-light</gamelistBackgroundImage>
+         <gamelistBackgroundOpacity>0.2</gamelistBackgroundOpacity>
          <gamelistMetadataBackgroundImage>gamelist-metadata-background-light</gamelistMetadataBackgroundImage>
          <gamelistSelectorColor>404040</gamelistSelectorColor>
          <gamelistSelectedColor>ffffff</gamelistSelectedColor>
@@ -46,17 +48,17 @@
    <colorScheme name="dark-original,light-original">
       <variables>
          <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
-         <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
-         <systemBackgroundArtPath>background/${system.theme}.jpg</systemBackgroundArtPath>
-         <gamelistBackgroundArtPath>background/${system.theme}.jpg</gamelistBackgroundArtPath>
+         <systemCarouselArtPath>carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
    <colorScheme name="dark-custom,light-custom">
       <variables>
-         <systemCarouselSelectorColor>ffffff</systemCarouselSelectorColor>
-         <carouselArtPath>carousel/${system.theme}.jpg</carouselArtPath>
-         <systemBackgroundArtPath>background-custom/${system.theme}.jpg</systemBackgroundArtPath>
-         <gamelistBackgroundArtPath>background-custom/${system.theme}.jpg</gamelistBackgroundArtPath>
+         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <systemCarouselArtPath>custom-carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>custom-backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>custom-backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
 </theme>

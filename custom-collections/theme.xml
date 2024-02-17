@@ -4,10 +4,11 @@
       <text name="custom-collection-name">
          <origin>0.5 0</origin>
          <metadata>systemFullname</metadata>
-         <color>${systemLogoColor}</color>
+         <color>${gamelistLogoColor}</color>
          <letterCase>uppercase</letterCase>
          <horizontalAlignment>center</horizontalAlignment>
          <lineSpacing>1</lineSpacing>
+         <visible>${displayCustomCollectionName}</visible>
       </text>
    </view>
    <aspectRatio name="16:9">
@@ -26,4 +27,19 @@
          </text>
       </view>
    </aspectRatio>
+   <fontSize name="medium">
+      <variables>
+         <displayCustomCollectionName>true</displayCustomCollectionName>
+      </variables>
+   </fontSize>
+   <fontSize name="large">
+      <variables>
+         <displayCustomCollectionName>false</displayCustomCollectionName>
+      </variables>
+   </fontSize>
+   <fontSize name="x-large">
+      <variables>
+         <displayCustomCollectionName>false</displayCustomCollectionName>
+      </variables>
+   </fontSize>
 </theme>

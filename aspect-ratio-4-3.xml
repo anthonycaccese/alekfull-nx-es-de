@@ -1,0 +1,373 @@
+<!--
+4:3 resolution: 
+based on 3840x2880
+-->
+<theme>
+
+   <!--
+   ///
+   All Views: Defaults
+   ///
+   -->
+   <view name="system,gamelist">
+      <image name="background-art-gradient">
+         <pos>0 0.402777777777778</pos><!-- 0 1160 -->
+         <size>1 0.347222222222222</size><!-- 100% 1000 -->
+      </image>
+      <helpsystem name="help">
+         <posDimmed>0.5 0.965</posDimmed>
+         <originDimmed>0.5 1</originDimmed>
+         <fontSize>${helpSystemFontSize}</fontSize>
+         <entrySpacing>${helpSystemEntrySpacing}</entrySpacing>
+      </helpsystem>
+   </view>
+   <fontSize name="medium">
+      <variables>
+         <helpSystemFontSize>0.027777777777778</helpSystemFontSize><!-- 80 -->
+         <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
+      </variables>
+   </fontSize>
+   <fontSize name="large">
+      <variables>
+         <helpSystemFontSize>0.034722222222222</helpSystemFontSize><!-- 100 -->
+         <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
+      </variables>
+   </fontSize>
+   <fontSize name="x-large">
+      <variables>
+         <helpSystemFontSize>0.041666666666667</helpSystemFontSize><!-- 120 -->
+         <helpSystemEntrySpacing>0.015</helpSystemEntrySpacing>
+      </variables>
+   </fontSize>
+
+   <!--
+   ///
+   System View: Defaults
+   ///
+   -->
+   <view name="system">
+      <image name="system-carousel-selector-shadow">
+         <pos>0.35 0.642361111111111</pos><!-- 1344 1850 -->
+         <size>0.3359375 0.447916666666667</size><!-- 1290 1290 -->
+      </image>
+      <carousel name="system-carousel">
+         <pos>0 0.642361111111111</pos><!-- 0 1850 -->
+         <size>1 0.399305555555556</size><!-- 100% 1150 -->
+         <itemSize>0.260416666666667 0.347222222222222</itemSize><!-- 1000 1000 -->
+         <fontSize>${systemCarouselFontSize}</fontSize>
+         <maxItemCount>3.25</maxItemCount>
+         <horizontalOffset>-0.15</horizontalOffset>
+         <selectedItemMargins>0.015 0.015</selectedItemMargins>
+      </carousel>
+      <image name="system-carousel-selector">
+         <pos>0.35 0.642361111111111</pos><!-- 1344 1850 -->
+         <size>0.302083333333333 0.402777777777778</size><!-- 1160 1160 -->
+      </image>
+      <text name="system-info">
+         <visible>false</visible>
+      </text>
+      <helpsystem name="help">
+         <origin>0.5 1</origin>
+         <pos>0.5 0.9375</pos><!-- 50% 2700 -->
+      </helpsystem>
+   </view>
+   <fontSize name="medium">
+      <variables>
+         <systemCarouselFontSize>0.024305555555556</systemCarouselFontSize><!-- 70 -->
+      </variables>
+   </fontSize>
+   <fontSize name="large">
+      <variables>
+         <systemCarouselFontSize>0.03125</systemCarouselFontSize><!-- 90 -->
+      </variables>
+   </fontSize>
+   <fontSize name="x-large">
+      <variables>
+         <systemCarouselFontSize>0.03125</systemCarouselFontSize><!-- 90 -->
+      </variables>
+   </fontSize>
+
+   <!--
+   ///
+   Gamelist View: Defaults
+   ///
+   -->
+   <view name="gamelist">
+      <image name="game-list-background-shadow">
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.4375 0.777777777777778</size><!-- 1680 2240 -->
+         <path>./_inc/images/4-3-gamelist-background-shadow.png</path>
+      </image>
+      <image name="game-list-background">
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.421875 0.756944444444444</size><!-- 1620 2180 -->
+         <path>${gamelistBackgroundImageCalculated}</path>
+      </image>
+      <textlist name="game-list">
+         <origin>0.5 0.5</origin>
+         <pos>0.263020833333333 0.454861111111111</pos><!-- 1010 1310 -->
+         <size>0.369791666666667 0.694444444444444</size><!-- 1420 2000 -->
+         <fontSize>${gamelistFontSize}</fontSize>
+         <selectorHeight>${gamelistSelectorHeight}</selectorHeight>
+         <lineSpacing>${gamelistLineSpacing}</lineSpacing>
+         <horizontalMargin>0.012</horizontalMargin>
+      </textlist>
+      <image name="system-logo">
+         <visible>${displaySystemLogo}</visible>
+      </image>
+      <helpsystem name="help">
+         <origin>${gamelistHelpOrigin}</origin>
+         <pos>${gamelistHelpPos}</pos>
+      </helpsystem>
+      <!-- Custom Help System -->
+      <image name="custom-help-option-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.063802083333333 0.918055555555556</pos><!-- 245 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-back.svg</path>
+      </image>
+      <text name="custom-help-option-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.09921875 0.918055555555556</pos><!-- 381 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>OPTIONS</text>
+      </text>
+      <image name="custom-help-menu-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.2703125 0.918055555555556</pos><!-- 1038 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-start.svg</path>
+      </image>
+      <text name="custom-help-menu-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.305729166666667 0.918055555555556</pos><!-- 1174 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>MENU</text>
+      </text>
+      <image name="custom-help-select-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.41640625 0.918055555555556</pos><!-- 1599 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-south.svg</path>
+      </image>
+      <text name="custom-help-select-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.451822916666667 0.918055555555556</pos><!-- 1735 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>SELECT</text>
+      </text>
+      <image name="custom-help-back-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.591927083333333 0.918055555555556</pos><!-- 2273 2640 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-east.svg</path>
+      </image>
+      <text name="custom-help-back-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.62734375 0.918055555555556</pos><!-- 2409 2644 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>BACK</text>
+      </text>
+      <image name="custom-help-fav-icon">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.73671875 0.918055555555556</pos><!-- 2273 2829 -->
+         <size>0 0.041666666666667</size><!-- - 120 -->
+         <color>${helpIconColor}</color>
+         <path>./_inc/images/help-button-north.svg</path>
+      </image>
+      <text name="custom-help-fav-text">
+         <visible>${customHelpSystem}</visible>
+         <origin>0 0.5</origin>
+         <pos>0.772135416666667 0.918055555555556</pos><!-- 2409 2965 -->
+         <fontSize>0.041666666666667</fontSize><!-- - 120 -->
+         <color>${helpTextColor}</color>
+         <fontPath>${fontBold}</fontPath>
+         <text>FAVORITE</text>
+      </text>
+   </view>
+   <fontSize name="medium">
+      <variables>
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-medium.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.027777777777778</gamelistFontSize><!-- 80 -->
+         <gamelistSelectorHeight>0.043055555555556</gamelistSelectorHeight><!-- 124 -->
+         <gamelistLineSpacing>1.5625</gamelistLineSpacing><!-- 125/80 -->
+         <displaySystemLogo>false</displaySystemLogo>
+         <gamelistHelpOrigin>0.5 1</gamelistHelpOrigin>
+         <gamelistHelpPos>0.5 0.9375</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>false</customHelpSystem>
+      </variables>
+   </fontSize>
+   <fontSize name="large">
+      <variables>
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-large.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.041666666666667</gamelistFontSize><!-- 120 -->
+         <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
+         <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
+         <displaySystemLogo>false</displaySystemLogo>
+         <gamelistHelpOrigin>0 0</gamelistHelpOrigin>
+         <gamelistHelpPos>1 1</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>true</customHelpSystem>
+      </variables>
+   </fontSize>
+   <fontSize name="x-large">
+      <variables>
+         <gamelistBackgroundImageCalculated>./_inc/images/4-3-${gamelistBackgroundImage}-xlarge.svg</gamelistBackgroundImageCalculated>
+         <gamelistFontSize>0.041666666666667</gamelistFontSize><!-- 120 -->
+         <gamelistSelectorHeight>0.0625</gamelistSelectorHeight><!-- 180 -->
+         <gamelistLineSpacing>1.68</gamelistLineSpacing><!-- 200/120 -->
+         <displaySystemLogo>false</displaySystemLogo>
+         <gamelistHelpOrigin>0 0</gamelistHelpOrigin>
+         <gamelistHelpPos>1 1</gamelistHelpPos><!-- 50% 2700 -->
+         <customHelpSystem>true</customHelpSystem>
+      </variables>
+   </fontSize>
+
+   <!--
+   ///
+   Gamelist View: Metadata-Off Variant
+   ///
+   -->
+   <variant name="gamelist-metadata-off-miximage,gamelist-metadata-off-boxart">
+      <view name="gamelist">
+         <video name="game-media">
+            <pos>0.736979166666667 0.454861111111111</pos><!-- 2830 1310 -->
+            <maxSize>0.421875 0.694444444444444</maxSize><!-- 1620 2000 -->
+         </video>
+      </view>
+   </variant>
+
+   <!--
+   ///
+   Gamelist View: Metadata-On Variant
+   ///
+   -->
+   <variant name="gamelist-metadata-on-miximage,gamelist-metadata-on-boxart">
+      <view name="gamelist">
+         <video name="game-media">
+            <pos>0.736979166666667 0.301388888888889</pos><!-- 2830 868 -->
+            <maxSize>0.421875 0.421875</maxSize><!-- 1620 1215 -->
+         </video>
+         <!-- Start: Extended Metadata -->
+         <image name="game-metadata-background-shadow-extended">
+            <visible>${metadataExtended}</visible>
+         </image>
+         <image name="game-metadata-background-image-extended">
+            <visible>${metadataExtended}</visible>
+         </image>
+         <text name="game-players-extended,game-genre-extended,game-developer-extended,game-publisher-extended,game-playcount-extended">
+            <visible>${metadataExtended}</visible>
+         </text>
+         <datetime name="game-releasedate-extended,game-lastplayed-extended">
+            <visible>${metadataExtended}</visible>
+         </datetime>
+         <rating name="game-rating-extended">
+            <visible>${metadataExtended}</visible>
+         </rating>
+         <!-- End: Extended Metadata -->
+         <!-- Start: Base Metadata -->
+         <image name="game-metadata-background-shadow-base">
+            <visible>${metadataBase}</visible>
+         </image>
+         <image name="game-metadata-background-image-base">
+            <visible>${metadataBase}</visible>
+         </image>
+         <rating name="game-rating-base">
+            <visible>${metadataBase}</visible>
+         </rating>
+         <datetime name="game-releasedate-base">
+            <visible>${metadataBase}</visible>
+         </datetime>
+         <text name="game-genre-base">
+            <visible>${metadataBase}</visible>
+         </text>
+         <!-- End: Base Metadata -->
+         <!-- Start: Min Metadata -->
+         <image name="game-metadata-background-shadow-min">
+            <pos>0.7375 0.570833333333333</pos><!-- 2832 1644 -->
+            <size>0.432291666666667 0.076388888888889</size><!-- 1660 220 -->
+            <visible>${metadataMin}</visible>
+         </image>
+         <image name="game-metadata-background-image-min">
+            <pos>0.7375 0.570833333333333</pos><!-- 2832 1644 -->
+            <size>0.421875 0.0625</size><!-- 1620 180 -->
+            <visible>${metadataMin}</visible>
+         </image>
+         <rating name="game-rating-min">
+            <pos>0.62890625 0.570833333333333</pos><!-- 2415 1644 -->
+            <size>0 ${metaDatafontSize}</size>
+            <visible>${metadataMin}</visible>
+         </rating>
+         <datetime name="game-releasedate-min">
+            <origin>0.5 0.5</origin>
+            <pos>0.84765625 0.570833333333333</pos><!-- 3255 1644 -->
+            <size>0.192708333333333 ${metaDatafontSize}</size><!-- 740 fontSize -->
+            <fontSize>${metaDatafontSize}</fontSize>
+            <visible>${metadataMin}</visible>
+         </datetime>
+         <!-- End: Min Metadata -->
+         <text name="game-description">
+            <pos>0.736979166666667 0.8125</pos><!-- 2830 2340 -->
+            <size>0.421875 ${descriptionHeight}</size><!-- 1620 descriptionHeight -->
+            <fontSize>${descriptionFontSize}</fontSize>
+            <lineSpacing>${descriptionLineSpacing}</lineSpacing>
+         </text>
+      </view>
+      <fontSize name="medium">
+         <variables>
+            <metaDatafontSize>0.030555555555556</metaDatafontSize><!-- 88 -->
+            <descriptionHeight>0.190972222222222</descriptionHeight><!-- 550 -->
+            <descriptionFontSize>0.030555555555556</descriptionFontSize><!-- 88 -->
+            <descriptionLineSpacing>1.5</descriptionLineSpacing>
+            <metadataExtended>false</metadataExtended>
+            <metadataBase>false</metadataBase>
+            <metadataMin>true</metadataMin>
+         </variables>
+      </fontSize>
+      <fontSize name="large">
+         <variables>
+            <metaDatafontSize>0.030555555555556</metaDatafontSize><!-- 88 -->
+            <descriptionHeight>0.190972222222222</descriptionHeight><!-- 550 -->
+            <descriptionFontSize>0.030555555555556</descriptionFontSize><!-- 88 -->
+            <descriptionLineSpacing>1.5</descriptionLineSpacing>
+            <metadataExtended>false</metadataExtended>
+            <metadataBase>false</metadataBase>
+            <metadataMin>true</metadataMin>
+         </variables>
+      </fontSize>
+      <fontSize name="x-large">
+         <variables>
+            <metaDatafontSize>0.041666666666667</metaDatafontSize><!-- 120 -->
+            <descriptionHeight>0.190972222222222</descriptionHeight><!-- 550 -->
+            <descriptionFontSize>0.041666666666667</descriptionFontSize><!-- 120 -->
+            <descriptionLineSpacing>1.5</descriptionLineSpacing>
+            <metadataExtended>false</metadataExtended>
+            <metadataBase>false</metadataBase>
+            <metadataMin>true</metadataMin>
+         </variables>
+      </fontSize>
+   </variant>
+	
+</theme>
