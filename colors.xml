@@ -48,17 +48,17 @@
    <colorScheme name="dark-original,light-original">
       <variables>
          <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
-         <systemCarouselArtPath>carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
-         <backgroundArtPath>backgrounds/${system.theme}.jpg</backgroundArtPath>
-         <backgroundArtDefaultImage>backgrounds/_default.jpg</backgroundArtDefaultImage>
+         <systemCarouselArtPath>./_inc/systems/carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>./_inc/systems/backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>./_inc/systems/backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
    <colorScheme name="dark-custom,light-custom">
       <variables>
          <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
-         <systemCarouselArtPath>custom-carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
-         <backgroundArtPath>custom-backgrounds/${system.theme}.jpg</backgroundArtPath>
-         <backgroundArtDefaultImage>custom-backgrounds/_default.jpg</backgroundArtDefaultImage>
+         <systemCarouselArtPath>~/ES-DE/theme-customizations/alekfull-nx/carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>~/ES-DE/theme-customizations/alekfull-nx/backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>~/ES-DE/theme-customizations/alekfull-nx/backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
 </theme>
