@@ -56,9 +56,9 @@
    <colorScheme name="dark-custom,light-custom">
       <variables>
          <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
-         <systemCarouselArtPath>~/ES-DE/theme-customizations/alekfull-nx/carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
-         <backgroundArtPath>~/ES-DE/theme-customizations/alekfull-nx/backgrounds/${system.theme}.jpg</backgroundArtPath>
-         <backgroundArtDefaultImage>~/ES-DE/theme-customizations/alekfull-nx/backgrounds/_default.jpg</backgroundArtDefaultImage>
+         <systemCarouselArtPath>./_inc/systems/custom-carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <backgroundArtPath>./_inc/systems/custom-backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtDefaultImage>./_inc/systems/custom-backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
 </theme>
