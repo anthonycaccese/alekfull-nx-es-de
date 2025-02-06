@@ -61,10 +61,15 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <path>./_inc/images/${backgroundArtGradientImage}</path>
          <zIndex>3</zIndex>
       </image>
-      <helpsystem name="help-system-view,help-gamelist-view,help-menu">
+      <helpsystem name="help-system-view,help-gamelist-view,help-menu-view">
          <fontPath>${fontBold}</fontPath>
          <textColor>${helpTextColor}</textColor>
          <iconColor>${helpIconColor}</iconColor>
+         <textColorDimmed>${helpTextColorDimmed}</textColorDimmed>
+         <iconColorDimmed>${helpIconColorDimmed}</iconColorDimmed>
+         <entrySpacingDimmed>0.00833</entrySpacingDimmed>
+         <iconTextSpacingDimmed>0.00416</iconTextSpacingDimmed>
+         <fontSizeDimmed>0.035</fontSizeDimmed>
          <customButtonIcon button="button_a_XBOX">./_inc/images/help-button-south.svg</customButtonIcon>
          <customButtonIcon button="button_a_PS">./_inc/images/help-button-south.svg</customButtonIcon>
          <customButtonIcon button="button_a_switch">./_inc/images/help-button-east.svg</customButtonIcon>
@@ -82,7 +87,12 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <customButtonIcon button="button_y_switch">./_inc/images/help-button-west.svg</customButtonIcon>
          <customButtonIcon button="button_y_SNES">./_inc/images/help-button-north.svg</customButtonIcon>
          <customButtonIcon button="thumbstick_click">./_inc/images/help-left-stick-click.svg</customButtonIcon>
-         <scope>shared</scope>
+      </helpsystem>
+      <helpsystem name="help-menu-view">
+         <scope>menu</scope>
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95</pos>
+         <fontPath>default</fontPath>
       </helpsystem>
    </view>
 

@@ -55,9 +55,9 @@
    </colorScheme>
    <colorScheme name="dark-custom,light-custom">
       <variables>
-         <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
+         <systemCarouselSelectorColor>ffffff</systemCarouselSelectorColor>
          <systemCarouselArtPath>./_inc/systems/custom-carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
-         <backgroundArtPath>./_inc/systems/custom-backgrounds/${system.theme}.jpg</backgroundArtPath>
+         <backgroundArtPath>./_inc/systems/custom-backgrounds/${system.theme}.webp</backgroundArtPath>
          <backgroundArtDefaultImage>./_inc/systems/custom-backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
    </colorScheme>
