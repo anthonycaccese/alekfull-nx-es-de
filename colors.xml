@@ -5,6 +5,8 @@
          <helpIconColor>bbbbbb</helpIconColor>
          <helpTextColorDimmed>aaaaaa</helpTextColorDimmed>
          <helpIconColorDimmed>aaaaaa</helpIconColorDimmed>
+         <systemStatusColor>ffffff</systemStatusColor>
+         <systemStatusBackgroundColor>2d2d2d</systemStatusBackgroundColor>
          <backgroundColor>2d2d2d</backgroundColor>
          <backgroundArtGradientImage>background-art-gradient-dark.png</backgroundArtGradientImage>
          <systemInfoColor>cccccc</systemInfoColor>
@@ -28,6 +30,8 @@
          <helpIconColor>777777</helpIconColor>
          <helpTextColorDimmed>333333</helpTextColorDimmed>
          <helpIconColorDimmed>333333</helpIconColorDimmed>
+         <systemStatusColor>000000</systemStatusColor>
+         <systemStatusBackgroundColor>fbfbfb</systemStatusBackgroundColor>
          <backgroundColor>fbfbfb</backgroundColor>
          <backgroundArtGradientImage>background-art-gradient-light.png</backgroundArtGradientImage>
          <systemInfoColor>555555</systemInfoColor>

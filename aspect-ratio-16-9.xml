@@ -14,7 +14,7 @@ based on 3840x2160
          <pos>0 0.481481481481481</pos><!-- 0 1040 -->
          <size>1 0.462962962962963</size><!-- 100% 1000 -->
       </image>
-      <helpsystem name="help-system-view,help-gamelist-view,help-menu-view">
+      <helpsystem name="help-system-view,help-gamelist-view">
          <fontSize>${helpSystemFontSize}</fontSize>
          <entrySpacing>0.015625</entrySpacing><!-- 60 -->
          <iconTextSpacing>0.00390625</iconTextSpacing><!-- 15 -->
