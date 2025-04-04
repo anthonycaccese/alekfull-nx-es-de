@@ -61,31 +61,43 @@ license:                Attribution-NonCommercial-ShareAlike 2.0 (CC-BY-NC-SA)
          <path>./_inc/images/${backgroundArtGradientImage}</path>
          <zIndex>3</zIndex>
       </image>
-      <helpsystem name="help">
-         <origin>1 1</origin>
-         <originDimmed>0.5 0</originDimmed>
+      <clock name="clock">
+         <opacity>0</opacity>
+      </clock>
+      <systemstatus name="
+         system-status
+         ">
+         <origin>1 0</origin>
+         <pos>0.9925 0.009</pos>
+         <backgroundHorizontalPadding>0.0075 0.0075</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.01 0.01</backgroundVerticalPadding>
+         <textRelativeScale>0.75</textRelativeScale>
+         <color>${systemStatusColor}</color>
+         <backgroundColor>${systemStatusBackgroundColor}</backgroundColor>
+         <customIcon icon="icon_bluetooth">./_inc/images/icon-bluetooth.svg</customIcon>
+         <customIcon icon="icon_wifi">./_inc/images/icon-wifi.svg</customIcon>
+         <customIcon icon="icon_cellular">./_inc/images/icon-cellular.svg</customIcon>
+         <customIcon icon="icon_battery_charging">./_inc/images/icon-battery-charging.svg</customIcon>
+         <customIcon icon="icon_battery_full">./_inc/images/icon-battery-full.svg</customIcon>
+         <customIcon icon="icon_battery_high">./_inc/images/icon-battery-high.svg</customIcon>
+         <customIcon icon="icon_battery_medium">./_inc/images/icon-battery-medium.svg</customIcon>
+         <customIcon icon="icon_battery_low">./_inc/images/icon-battery-low.svg</customIcon>
+      </systemstatus>
+      <helpsystem name="help-system-view,help-gamelist-view">
          <fontPath>${fontBold}</fontPath>
          <textColor>${helpTextColor}</textColor>
          <iconColor>${helpIconColor}</iconColor>
-         <textColorDimmed>${helpTextColorDimmed}</textColorDimmed>
-         <iconColorDimmed>${helpIconColorDimmed}</iconColorDimmed>
-         <customButtonIcon button="button_a_XBOX">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_a_PS">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_a_switch">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_a_SNES">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_b_XBOX">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_b_PS">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_b_switch">./_inc/images/help-button-south.svg</customButtonIcon>
-         <customButtonIcon button="button_b_SNES">./_inc/images/help-button-east.svg</customButtonIcon>
-         <customButtonIcon button="button_x_XBOX">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_x_PS">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_x_switch">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_x_SNES">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_y_XBOX">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_y_PS">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="button_y_switch">./_inc/images/help-button-west.svg</customButtonIcon>
-         <customButtonIcon button="button_y_SNES">./_inc/images/help-button-north.svg</customButtonIcon>
-         <customButtonIcon button="thumbstick_click">./_inc/images/help-left-stick-click.svg</customButtonIcon>
+      </helpsystem>
+      <helpsystem name="help-menu-view">
+         <scope>menu</scope>
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95</pos>
+         <iconColor>cccccc</iconColor>
+         <textColor>cccccc</textColor>
+         <backgroundColor>181818</backgroundColor>
+         <backgroundHorizontalPadding>0.05 0.05</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.05 0.05</backgroundVerticalPadding>
+         <backgroundCornerRadius>0.005</backgroundCornerRadius>
       </helpsystem>
    </view>
 

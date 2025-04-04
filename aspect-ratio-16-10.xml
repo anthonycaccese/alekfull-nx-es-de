@@ -14,29 +14,31 @@ based on 3840x2400
          <pos>0 0.483333333333333</pos><!-- 0 1160 -->
          <size>1 0.416666666666667</size><!-- 100% 1000 -->
       </image>
-      <helpsystem name="help">
-         <posDimmed>0.5 0.965</posDimmed>
-         <originDimmed>0.5 1</originDimmed>
+      <helpsystem name="help-system-view,help-gamelist-view">
          <fontSize>${helpSystemFontSize}</fontSize>
-         <entrySpacing>${helpSystemEntrySpacing}</entrySpacing>
+         <entrySpacing>0.015</entrySpacing>
+         <iconTextSpacing>0.00390625</iconTextSpacing><!-- 15 -->
       </helpsystem>
    </view>
    <fontSize name="medium">
       <variables>
          <helpSystemFontSize>0.021666666666667</helpSystemFontSize><!-- 52 -->
-         <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
+         <helpSystemViewEntries>all</helpSystemViewEntries>
+         <helpGamelistViewEntries>all</helpGamelistViewEntries>
       </variables>
    </fontSize>
    <fontSize name="large">
       <variables>
          <helpSystemFontSize>0.025</helpSystemFontSize><!-- 60 -->
-         <helpSystemEntrySpacing>0.0085</helpSystemEntrySpacing>
+         <helpSystemViewEntries>all</helpSystemViewEntries>
+         <helpGamelistViewEntries>back,start,a,b,x,y,thumbstickclick</helpGamelistViewEntries>
       </variables>
    </fontSize>
    <fontSize name="x-large">
       <variables>
          <helpSystemFontSize>0.030833333333333</helpSystemFontSize><!-- 74 -->
-         <helpSystemEntrySpacing>0.015</helpSystemEntrySpacing>
+         <helpSystemViewEntries>start,a,x,left/right</helpSystemViewEntries>
+         <helpGamelistViewEntries>back,start,a,b,x,y,thumbstickclick</helpGamelistViewEntries>
       </variables>
    </fontSize>
 
@@ -65,9 +67,13 @@ based on 3840x2400
          <size>0.390625 ${systemInfoFontSize}</size><!-- 1500 fontSize -->
          <fontSize>${systemInfoFontSize}</fontSize>
       </text>
-      <helpsystem name="help">
+      <helpsystem name="help-system-view">
+         <scope>view</scope>
+         <origin>1 1</origin>
          <pos>0.947916666666667 0.925</pos><!-- 3640 2220 -->
+         <entries>${helpSystemViewEntries}</entries>
       </helpsystem>
+      <helpsystem name="help-gamelist-view"><scope>none</scope></helpsystem>
    </view>
    <fontSize name="medium">
       <variables>
@@ -116,10 +122,13 @@ based on 3840x2400
          <maxSize>0.130208333333333 0.041666666666667</maxSize><!-- 500 100 -->
          <visible>${displaySystemLogo}</visible>
       </image>
-      <helpsystem name="help">
+      <helpsystem name="help-gamelist-view">
+         <scope>view</scope>
          <origin>${gamelistHelpOrigin}</origin>
          <pos>${gamelistHelpPos}</pos>
+         <entries>${helpGamelistViewEntries}</entries>
       </helpsystem>
+      <helpsystem name="help-system-view"><scope>none</scope></helpsystem>
    </view>
    <fontSize name="medium">
       <variables>
