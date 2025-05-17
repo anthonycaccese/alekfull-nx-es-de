@@ -52,7 +52,7 @@
    <colorScheme name="dark-original,light-original">
       <variables>
          <systemCarouselSelectorColor>00C3E3</systemCarouselSelectorColor>
-         <systemCarouselArtPath>./_inc/systems/carousel-icons/${system.theme}.jpg</systemCarouselArtPath>
+         <systemCarouselArtPath>./_inc/systems/carousel-icons/${system.theme}.webp</systemCarouselArtPath>
          <backgroundArtPath>./_inc/systems/backgrounds/${system.theme}.jpg</backgroundArtPath>
          <backgroundArtDefaultImage>./_inc/systems/backgrounds/_default.jpg</backgroundArtDefaultImage>
       </variables>
